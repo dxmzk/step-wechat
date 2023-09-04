@@ -1,0 +1,15 @@
+<view class="v-home-search">
+  <view class="v-home-app-search2" />
+  <view class="v-home-row v-home-app-search" style="margin-top: {{statusBarHeight}}px">
+    <view class="v-home-row v-home-search-box">
+      <image class="v-home-search-icon" src="/assets/icon/search.png" />
+      <text class="v-home-search-text" bindtap="onSearch">{{keyword || '请输入关键字'}}</text>
+      <image class="v-home-search-scan" bindtap="onScan" mode="scaleToFill" src="/assets/icon/scan.png" />
+    </view>
+    <view class="v-home-search-cart-box" bindtap="onCutCart">
+      <image class="v-home-search-cart" src="/assets/icon/cart_icon.png" />
+      <view wx:if="{{cartNum > 0}}" class="v-home-search-cart-count">{{cartNum}}</view>
+    </view>
+    <image class="v-home-search-qrcode" bindtap="onVipCode" src="/assets/icon/vip_code.png" />
+  </view>
+</view>

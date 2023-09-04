@@ -1,0 +1,121 @@
+<import src="cart.skeleton.wxml" />
+<template is="skeleton" wx:if="{{firstIn}}" />
+<view class="container cart">
+  <wxs src="../../utils/wxs/goods.wxs" module="tools" />
+  <header back="{{false}}" title="购物车" />
+  <!-- 顶部地址 -->
+  <view class="row-box top-address-box">
+    <image class="address-ic" src="/assets/icon/address.png" />
+    <text class="flex cart-address" bindtap="onChangeCity">{{address}}</text>
+    <view class="s-line" />
+    <text class="cart-edit" bindtap="onEditCart">{{editMode ? '完成':'编辑'}}</text>
+  </view>
+  <!-- 商品 -->
+  <view class="cart-list">
+    <block wx:for="{{cartList}}" wx:for-index="idx" wx:key="car" wx:for-item="car">
+      <view class="shop-item">
+        <view class="row-box shop-size {{(car.distributeAddress == 1 || editMode) ? '':'opacity' }}">
+          <image class="check-img" bindtap="onCheckShopOrGoods" data-idx="{{idx}}" src="/assets/icon/check_{{(car.isSelected==1 || (editMode && car.edit)) ?'on':'no'}}.png" />
+          <text class="shop-title flex">{{car.shopName}}</text>
+          <text wx:if="{{car.distributeAddress != 1}}" class="shop-alert">暂不支持跨城配送</text>
+        </view>
+        <block wx:for="{{car.cartItemVOS}}" wx:key="id">
+          <view class="goods-item">
+            <view wx:if="{{item.isSelected == 1 && item.promotion}}" class="row-box goods-top-size">
+              <text class="sub-box">{{tools.activityType(item.promotion.rewardType)}}</text>
+              <text class="sub-text">{{tools.getActivityStr(item.promotion)}}</text>
+              <text class="flex" />
+              <view class="row" bindtap="onTapAddItem" data-item="{{item.promotion}}">
+                <text class="sub-text add-on">去凑单</text>
+                <image class="right-ic" src="/assets/icon/arrow_right.png" />
+              </view>
+            </view>
+            <scroll-view class="scroll" scroll-x="true" show-scrollbar="false" bindscroll="onScrollChange" bindtouchend="onScrollEnd">
+              <view class="row-box cart-scroll">
+                <image class="check-img" bindtap="onCheckShopOrGoods" data-idx="{{idx}}" data-index="{{index}}" src="/assets/icon/check_{{(item.isSelected==1 || (editMode && item.edit)) ?'on':'no'}}.png" />
+                <view class="goods-img-box {{(item.opacity || editMode) ? '':'opacity'}}">
+                  <image class="goods-img" bindtap="onClickGoods" data-item="{{item}}" mode="aspectFill" src="{{item.itemUrl}}" />
+                  <view wx:if="{{item.state != 1}}" class="goods-img img-mark center">已下架</view>
+                </view>
+                <view class="goods-content column-box flex">
+                  <text class="goods-title ellip {{(item.opacity || editMode) ? '':'opacity'}}">{{item.itemName}}</text>
+                  <view class="row-box {{(item.opacity || editMode) ? '':'opacity'}}">
+                    <view wx:if="{{item.specification}}" class="goods-type row ai-center" bindtap="onShowDialog" data-item="{{item}}" data-tag="3">
+                      <text class="type-str ellip">{{item.specification}}</text>
+                      <image class="type-ic" src="/assets/icon/arrow_down.png" />
+                    </view>
+                    <view wx:if="{{item.promotion}}" class="goods-type" bindtap="onShowDialog" data-tag="2" data-item="{{item}}">
+                      <text>更多促销</text>
+                      <image class="type-ic" src="/assets/icon/arrow_down.png" />
+                    </view>
+                  </view>
+                  <view wx:if="{{item.promotionLabel}}" class="coupon-box {{(item.opacity || editMode) ? '':'opacity'}}">
+                    <block wx:for="{{item.promotionLabel}}" wx:for-item="prom" wx:key="index">
+                      <text class="coupon-tag ellip">{{prom}}</text>
+                    </block>
+                  </view>
+                  <view class="flex" />
+                  <!-- 价格和数量 -->
+                  <view class="row-box price-box {{(item.opacity || editMode) ? '':'opacity'}}">
+                    <text class="goods-price flex"><text style="font-size: 22rpx;">¥</text>{{item.price || "暂无价格"}}</text>
+                    <view wx:if="{{item.state == 1}}" class="row-box count-box">
+                      <view class="count-edit row center" bindtap="onChangeGoodsNum" data-tag="-1" data-idx="{{idx}}" data-index="{{index}}">
+                        <image class="count-edit-ic" mode="scaleToFill" src="/assets/icon/add_ic2.png" />
+                      </view>
+                      <text class="goods-count" bindtap="onTapCount" data-idx="{{idx}}" data-index="{{index}}" data-num="{{item.quantity}}">{{item.quantity}}</text>
+                      <view class="count-edit row center" bindtap="onChangeGoodsNum" data-tag="1" data-idx="{{idx}}" data-index="{{index}}">
+                        <image class="count-edit-ic" mode="scaleToFill" src="/assets/icon/add_ic.png" />
+                      </view>
+                    </view>
+                  </view>
+                  <view wx:if="{{item.state != 1}}" bindtap="onCheckGoods" data-item="{{item}}" class="look-other">去其他门店逛逛</view>
+                </view>
+                <view class="goods-delete" bindtap="onDeleteGoods" data-gid="{{item.id}}" data-choose="{{item.isSelected}}">删 除</view>
+              </view>
+            </scroll-view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+
+  <!-- 商品空状态 -->
+  <view class="empty-box" wx:if="{{!firstIn && cartList.length < 1}}">
+    <empty icon="/assets/img/empty_cart.png" />
+    <text class="empty-text">{{isLogin ? '购物车是空的!' : '购物车竟然是空的？\n 赶快登录看看吧！'}}</text>
+    <view class="row jc-center">
+      <view class="goto-btn" bindtap="onEmptyClick">{{isLogin ? '商城首页':'立即登录'}}</view>
+    </view>
+  </view>
+
+  <!-- 推荐商品 -->
+
+  <text wx:if="{{!firstIn && goodsList.length > 0}}" class="recommend-box">为您推荐</text>
+  <goods_list wx:if="{{!firstIn && goodsList.length > 0}}" items="{{goodsList}}" bindclick="onGoodsListClick" />
+
+  <!-- 底部栏 -->
+  <view wx:if="{{showDialog == 0}}" class="footer-height" />
+  <view class="row-box cart-footer">
+    <view wx:if="{{editMode}}" class="row-box check-all" bindtap="onCheckAll">
+      <image class="check-img" src="/assets/icon/check_{{chooseAll ?'on':'no'}}.png" />
+      <text class="check-all-str"> 全选</text>
+    </view>
+    <view wx:if="{{editMode}}" class="flex" />
+    <view wx:if="{{!editMode}}" class="flex column cost-box">
+      <view class="total-cost">
+        <text style="font-size: 22rpx;">¥</text>
+        <text>{{costMoney}}</text>
+      </view>
+      <view wx:if="{{promotionAmount > 0}}" class="row-box" bindtap="onShowDialog" data-tag="1">
+        <text class="cost-line">已选{{payCount}}件商品，共减 ¥{{promotionAmount}} 查看明细</text>
+        <image class="up-ic" src="/assets/icon/arrow_up_yo.png" />
+      </view>
+    </view>
+    <view class="go-pay" bindtap="onDeleteOrCommit">{{editMode ? '删除':'结算'}}</view>
+  </view>
+  <!-- 弹窗 -->
+  <coupon_info wx:if="{{showDialog == 1}}" couponInfo="{{dialogItem}}" bindclick="_hintDialog" />
+  <promotion wx:if="{{showDialog == 2}}" list="{{activityList}}" bindclick="onMoreCoupon" />
+  <goods_type wx:if="{{showDialog == 3}}" goodsItem="{{dialogItem}}" bindclick="onChooseType" />
+  <input_count wx:if="{{showDialog == 4}}" count="{{goodsCount}}" bindcount="onInputCount"/>
+</view>

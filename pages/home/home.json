@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "goods_list": "/components/goods_list/goods",
+    "home_header": "/pages/home/widget/home_header/header",
+    "home_search": "/pages/home/widget/home_search/search"
+  }
+}

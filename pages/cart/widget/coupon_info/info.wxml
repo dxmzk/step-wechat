@@ -1,0 +1,30 @@
+<!-- 优惠明细 -->
+<view class="v-coupon-info v-column" catchtouchmove="true">
+  <view class="v-flex" bindtap="onClose" />
+  <view class="v-content v-column" animation="{{animData}}">
+    <view class="v-row v-line">
+      <text class="v-title v-flex">优惠明细</text>
+      <image class="v-close" bindtap="onClose" src="/assets/icon/close_ic.png" />
+    </view>
+    <view class="v-list">
+      <block wx:for="{{items}}" wx:key="item">
+        <view class="v-row v-item">
+          <text class="v-label">{{item.label}}</text>
+          <text class="v-value {{item.tag == 1 ? 'v-org' : ''}}"><text class="v-unit">{{(item.tag == 1 && item.value) ? '减':''}}¥</text>{{item.value}}</text>
+        </view>
+      </block>
+    </view>
+    <!-- <view class="v-row v-footer">
+            <view class="v-flex v-column v-cost-box">
+                <view class="v-total-cost">
+                    <view style="font-size: 22rpx;">¥</view>23234
+                </view>
+                <view class="v-cost-old v-row" bindtap="onClose" data-tag="1">
+                    <text class="v-cost-line">已选1件商品，共减 ¥234 查看明细</text>
+                    <image class="v-up-ic" src="/assets/icon/arrow_up_yo.png" />
+                </view>
+            </view>
+            <view class="v-go-pay" bindtap="onCommit">结算</view>
+        </view> -->
+  </view>
+</view>

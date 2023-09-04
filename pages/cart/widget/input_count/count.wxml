@@ -1,0 +1,17 @@
+<view class="v-input-count" catchtouchmove="true">
+  <view class="v-content v-column">
+    <view class="v-title3">请输入您想要的数量</view>
+    <input 
+      class="v-input3" maxlength="4" 
+      type="number" value="{{value}}" 
+      focus="{{true}}" cursor="{{4}}" 
+      selectionStart="{{4}}" selectionEnd="{{4}}" 
+      confirm-type="done" placeholder="请输入数量" 
+      bindblur="onInputBlur" bindconfirm="onInputBlur" bindinput="onInputCount"/>
+    <view class="v-row v-actions">
+      <text class='v-btn' bindtap="onClose">取消</text>
+      <view class="v-line" />
+      <text class="v-btn v-btn2" bindtap="onComfirm">确定</text>
+    </view>
+  </view>
+</view>

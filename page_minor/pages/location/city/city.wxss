@@ -1,0 +1,19 @@
+.city {
+  background-color: white;
+}
+
+.p-text {
+  height: 96rpx;
+  line-height: 96rpx;
+  margin-left: 32rpx;
+
+  color: #232323;
+  font-size: 28rpx;
+  font-weight: 500;
+  font-family: PingFangSC-Medium;
+}
+.p-city-item {
+  font-weight: 400;
+  font-family: PingFangSC-Regular;
+  border-bottom: solid 1px #efefef;
+}

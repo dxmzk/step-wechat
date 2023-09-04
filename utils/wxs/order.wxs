@@ -1,0 +1,18 @@
+function statusStr(status) {
+  let str = "";
+  switch (status) {
+    case 0:
+      str = "待支付";
+      break;
+    case 1:
+      str = "待发货";
+      break;
+    case 2:
+      str = "待收货";
+      break;
+    case 3:
+      str = "待评价";
+      break;
+  }
+  return str;
+};

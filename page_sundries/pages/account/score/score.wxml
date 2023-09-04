@@ -1,0 +1,17 @@
+<view class="container">
+  <header title="积分" />
+  <view class="column center top-view">
+    <text class='text1'>可用积分</text>
+    <text class='text2'>{{memberPoints}}</text>
+  </view>
+  
+  <view class='content-view'>
+    <view class='text1'>使用说明:</view>
+    <view class='text1'>1.顾客在百安居线下门店购买装修材料时</view>
+    <view class='text3'>a.向门店收银人员提供注册百安居会员时登记的手机号码，即可使用积分直接折抵客户的消费应付金额，每100积分可以抵扣人民币1元。</view>
+    <view class='text3'>b.使用积分抵扣消费应付金额的订单如发生退货，则只退回顾客实际支付的金额，所使用的积分无法进行退回。</view>
+    <view class='text1'>2.积分每满100方可使用，不足100积分的，无法折抵消费应付的金额。</view>
+    <view class='text1'>3.积分不可售出和转让，不可兑换现金，不找零。</view>
+    <view class='text1'>4.详询百安居店内工作人员。</view>
+  </view>
+</view>

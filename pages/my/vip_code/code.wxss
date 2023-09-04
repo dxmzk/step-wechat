@@ -1,0 +1,95 @@
+.code-box {
+  margin: 64rpx 32rpx;
+  border-radius: 8rpx;
+  padding: 48rpx 0 24rpx 0;
+  align-items: center;
+  background-color: white;
+}
+.vip-tag-str {
+  font-size: 22rpx;
+  color: #fe7100;
+  line-height: 36rpx;
+  padding: 0 6rpx;
+  border: 1px solid #fed4b2;
+  border-radius: 4rpx;
+}
+.phone {
+  margin-left: 16rpx;
+  font-size: 30rpx;
+  color: #333333;
+  text-align: center;
+  font-weight: 700;
+  font-family: PingFangSC-Medium;
+}
+.qrcode-box {
+  width: 360rpx;
+  height: 360rpx;
+  margin-top: 24rpx;
+  margin-bottom: 16rpx;
+  border-radius: 8rpx;
+}
+.qrcode-img {
+  width: 360rpx;
+  height: 360rpx;
+  border-radius: 8rpx;
+}
+.card-code {
+  font-size: 28rpx;
+  color: #323232;
+  line-height: 44rpx;
+}
+.card-look {
+  font-family: PingFangSC-Semibold;
+  font-size: 28rpx;
+  color: #323232;
+  line-height: 44rpx;
+  font-weight: 600;
+  margin-left: 6rpx;
+}
+.card-hint {
+  font-size: 24rpx;
+  color: #cccccc;
+  margin-top: 48rpx;
+  align-items: center;
+}
+.actions {
+  width: 100%;
+  margin-top: 60rpx;
+}
+.action-box {
+  flex: 1;
+  height: 128rpx;
+}
+.coupon-box {
+  height: 200rpx;
+  margin: 0 32rpx;
+  padding-left: 32rpx;
+  border-radius: 16rpx;
+  background-color: white;
+}
+.money-str {
+  font-size: 48rpx;
+  color: #ff4b33;
+  letter-spacing: 5px;
+  font-weight: 700;
+  margin-top: 22rpx;
+  line-height: 66rpx;
+  font-family: PingFangSC-Medium;
+}
+.info-str {
+  font-size: 24rpx;
+  color: #ffa599;
+  line-height: 26rpx;
+  letter-spacing: 9px;
+}
+.get-btn {
+  width: 120rpx;
+  height: 48rpx;
+  color: white;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  text-align: center;
+  margin-top: 16rpx;
+  border-radius: 8rpx;
+  background-color: #FF4B33;
+}

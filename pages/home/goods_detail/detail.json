@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "swiper": "./widget/swiper/swiper",
+    "goods_type": "./widget/goods_type/goods_type",
+    "goods_list": "/components/goods_list/goods"
+  }
+}

@@ -1,0 +1,22 @@
+
+.list {
+  margin-bottom: 16rpx;
+  background-color: white;
+}
+.list-logo {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 8rpx;
+  background-color: salmon;
+}
+.item {
+  padding: 24rpx 32rpx;
+  border-bottom: solid 1px #F5F5F5;
+}
+.goods-img {
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 16rpx;
+  border-radius: 8rpx;
+  background-color: #F3F3F3;
+}

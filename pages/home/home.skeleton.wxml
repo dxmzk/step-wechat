@@ -1,0 +1,164 @@
+<!--
+使用方法：/pages/home/home.wxml 引入模板
+```
+<import src="home.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+在 /pages/home/home.wxss 中引入样式
+```
+@import "./home.skeleton.wxss";
+```
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="container home">
+      <view is="pages/home/widget/home_header/header">
+        <view class="v-navigation-bar header--v-navigation-bar">
+          <view class="v-navigation-bar_inner2 header--v-navigation-bar_inner2" style="padding-top: 44px;"></view>
+          <view class="v-navigation-bar_inner header--v-navigation-bar_inner sk-image" style="padding-top: 44px;">
+            <view class="v-navigation-bar_left header--v-navigation-bar_left">
+              <text class="sk-transparent sk-text-14-2857-907 sk-text">上海龙阳店</text>
+              <image class="v-navigation-bar_left_ic header--v-navigation-bar_left_ic sk-image"></image>
+            </view>
+            <view class="v-navigation-bar_center header--v-navigation-bar_center">
+              <text class="sk-transparent sk-text-14-2857-606 sk-text" style="background-position-x: 50%;">百安居商城</text>
+            </view>
+            <view class="v-navigation-bar_right header--v-navigation-bar_right"></view>
+          </view>
+        </view>
+      </view>
+      <view is="pages/home/widget/home_search/search">
+        <view class="search--v-home-search">
+          <view class="search--v-home-app-search2"></view>
+          <view class="search--v-home-row search--v-home-app-search sk-image" style="margin-top: 44px">
+            <view class="search--v-home-row search--v-home-search-box">
+              <image class="search--v-home-search-icon sk-image"></image>
+              <text class="search--v-home-search-text sk-transparent sk-text-14-2857-881 sk-text">请输入关键字</text>
+              <image class="search--v-home-search-scan sk-image" mode="scaleToFill"></image>
+            </view>
+            <view class="search--v-home-search-cart-box">
+              <image class="search--v-home-search-cart sk-image"></image>
+            </view>
+            <image class="search--v-home-search-qrcode sk-image"></image>
+          </view>
+        </view>
+      </view>
+      <view class="swiper-box sk-image">
+        <view class="swiper-item sk-image" mode="aspectFill"></view>
+      </view>
+      <view class="row home-tab1">
+        <view>
+          <image class="home-tab1-ic sk-image"></image>
+          <text class="home-tab1-str sk-transparent sk-text-14-7059-149 sk-text">实体门店</text>
+        </view>
+        <view>
+          <image class="home-tab1-ic sk-image"></image>
+          <text class="home-tab1-str sk-transparent sk-text-14-7059-562 sk-text">品牌环保</text>
+        </view>
+        <view>
+          <image class="home-tab1-ic sk-image"></image>
+          <text class="home-tab1-str sk-transparent sk-text-14-7059-461 sk-text">会员优品</text>
+        </view>
+        <view>
+          <image class="home-tab1-ic sk-image"></image>
+          <text class="home-tab1-str sk-transparent sk-text-14-7059-758 sk-text">售后无忧</text>
+        </view>
+      </view>
+      <view class="home-tab2">
+        <view class="column center home-tab2-item" >
+          <image class="home-tab2-ic sk-image"></image>
+          <text class="home-tab2-str sk-transparent sk-text-14-2857-393 sk-text">全屋</text>
+        </view>
+        <view class="column center home-tab2-item" >
+          <image class="home-tab2-ic sk-image"></image>
+          <text class="home-tab2-str sk-transparent sk-text-14-2857-152 sk-text">厨房</text>
+        </view>
+        <view class="column center home-tab2-item" >
+          <image class="home-tab2-ic sk-image"></image>
+          <text class="home-tab2-str sk-transparent sk-text-14-2857-703 sk-text">家具</text>
+        </view>
+        <view class="column center home-tab2-item" >
+          <image class="home-tab2-ic sk-image"></image>
+          <text class="home-tab2-str sk-transparent sk-text-14-2857-899 sk-text">家居</text>
+        </view>
+        <view class="column center home-tab2-item" >
+          <image class="home-tab2-ic sk-image"></image>
+          <text class="home-tab2-str sk-transparent sk-text-14-2857-469 sk-text">电器</text>
+        </view>
+        <view class="column center home-tab2-item" >
+          <image class="home-tab2-ic sk-image"></image>
+          <text class="home-tab2-str sk-transparent sk-text-14-2857-603 sk-text">建材</text>
+        </view>
+        <view class="column center home-tab2-item" >
+          <image class="home-tab2-ic sk-image"></image>
+          <text class="home-tab2-str sk-transparent sk-text-14-2857-677 sk-text">瓷砖</text>
+        </view>
+        <view class="column center home-tab2-item" >
+          <image class="home-tab2-ic sk-image"></image>
+          <text class="home-tab2-str sk-transparent sk-text-14-2857-11 sk-text">地板</text>
+        </view>
+        <view class="column center home-tab2-item" >
+          <image class="home-tab2-ic sk-image"></image>
+          <text class="home-tab2-str sk-transparent sk-text-14-2857-742 sk-text">门窗</text>
+        </view>
+        <view class="column center home-tab2-item" >
+          <image class="home-tab2-ic sk-image"></image>
+          <text class="home-tab2-str sk-transparent sk-text-14-2857-824 sk-text">更多</text>
+        </view>
+      </view>
+      <view class="row home-tab4 sk-image">
+        <view class="column home-tab4-info">
+          <text class="home-tab4-title sk-transparent sk-text-14-2857-588 sk-text">品牌推荐</text>
+          <text class="home-tab4-label sk-transparent sk-text-14-2857-729 sk-text">精选安居大牌</text>
+          <view class="row center">
+            <text class="sk-transparent sk-text-22-7273-134 sk-text">GO</text>
+            <image class="home-tab4-go-ic sk-image"></image>
+          </view>
+        </view>
+        <view class="column home-tab4-list">
+          <image class="home-tab4-img sk-image"></image>
+          <text class="home-tab4-name sk-transparent sk-text-14-2857-542 sk-text" style="background-position-x: 50%;">方太</text>
+        </view>
+        <view class="column home-tab4-list">
+          <image class="home-tab4-img sk-image"></image>
+          <text class="home-tab4-name sk-transparent sk-text-14-2857-812 sk-text" style="background-position-x: 50%;">东鹏</text>
+        </view>
+        <view class="column home-tab4-list">
+          <image class="home-tab4-img sk-image"></image>
+          <text class="home-tab4-name sk-transparent sk-text-14-2857-153 sk-text" style="background-position-x: 50%;">秋叶	</text>
+        </view>
+      </view>
+      <view class="scroll-box">
+        <view class="tab-box" data-idx="-1" data-tag="0">
+          <text class="tab-item sk-transparent sk-text-27-5000-389 sk-text">爆款推荐</text>
+        </view>
+        <view class="tab-box" data-idx="3497" data-tag="1">
+          <text class="tab-item2 sk-transparent sk-text-33-7500-384 sk-text">厨卫大电</text>
+        </view>
+        <view class="tab-box" data-idx="3514" data-tag="2">
+          <text class="tab-item2 sk-transparent sk-text-33-7500-927 sk-text">油漆涂料</text>
+        </view>
+        <view class="tab-box" data-idx="21" data-tag="3">
+          <text class="tab-item2 sk-transparent sk-text-33-7500-290 sk-text">热门家具</text>
+        </view>
+        <view class="tab-box" data-idx="35" data-tag="4">
+          <text class="tab-item2 sk-transparent sk-text-33-7500-895 sk-text">灯饰照明</text>
+        </view>
+      </view>
+      <view is="components/goods_list/goods">
+        <view class="goods--v-goods-list">
+          <view class="goods--v-list">
+            <view class="goods--v-column goods--v-item">
+              <image class="goods--v-item-img sk-image" lazy-load="true" mode="aspectFill"></image>
+            </view>
+          </view>
+          <view class="goods--v-list">
+            <view class="goods--v-column goods--v-item2">
+              <image class="goods--v-item-img2 sk-image" lazy-load="true" mode="aspectFill"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

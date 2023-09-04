@@ -1,0 +1,15 @@
+.v-goods-list {
+  max-width: 100%;
+  padding: 0 16rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.v-goods-list .v-list {
+  flex: 1;
+  max-width: 50%;
+}
+.v-goods-list .v-list2 {
+  flex: 1;
+  max-width: 50%;
+}

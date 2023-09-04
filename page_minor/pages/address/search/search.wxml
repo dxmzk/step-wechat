@@ -1,0 +1,36 @@
+<view class="container search">
+  <header title="地址搜索" />
+  <view class="row search-box">
+    <view bindtap="onChangeCity">
+      <text>{{cityName}}</text>
+      <image class="icon" src="/assets/icon/arrow_down.png" />
+    </view>
+    <view class="flex row input">
+      <image class="icon" src="/assets/icon/search.png" />
+      <input class="flex" placeholder="请输入地址关键字" bindinput="onInputStr" bindfocus="onFocus" bindconfirm="onSearch"/>
+    </view>
+    <!-- <text class="search-btn">{{inputKey ? '确定':'取消'}}</text> -->
+    <text class="search-btn" bindtap="onBack">取消</text>
+  </view>
+
+  <view wx:if="{{showHistory}}" class="history">
+    <view class="row ai-center">
+      <text class="flex label-title">历史搜索</text>
+      <image class="clear-ic" src="/assets/icon/clear.png" bindtap="_clearHistory"/>
+    </view>
+    <view class="row wrap">
+      <block wx:for="{{historys}}" wx:key="index">
+        <view class="node" bindtap="onNodeClick" data-idx="{{index}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="list">
+    <block wx:for="{{addressList}}" wx:key="index">
+      <view class="item" bindtap="onItemClick" data-item="{{item}}">
+        <text class="address-name">{{item.name}}</text>
+        <text class="address-info">{{item.cityname}}{{item.adname}}{{item.address}}</text>
+      </view>
+    </block>
+  </view>
+
+</view>

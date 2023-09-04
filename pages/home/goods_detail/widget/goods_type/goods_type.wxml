@@ -1,0 +1,32 @@
+<!-- 商品类型 -->
+<view class="v-goods-type" catchtouchmove="true">
+  <view class="v-flex" bindtap="onClose" />
+  <view class="v-content v-column" animation="{{animData}}">
+    <view class="v-row v-line" style="min-height: 220rpx;">
+      <image src="{{skuData.skuImgUrl}}" class="v-img" bindtap="onLookImg" />
+      <view class="v-column v-price">
+        <text class="v-goods-code">商品编号：{{skuData.spuCode || skuData.skuCode}}</text>
+        <text>¥<text class="v-new-price">{{skuData.price || '暂无价格'}}</text><text wx:if="{{skuData.customerPrice}}" class="v-old-price">¥{{skuData.customerPrice}}</text></text>
+      </view>
+      <image class="v-close" bindtap="onClose" src="/assets/icon/close_ic.png" />
+    </view>
+
+    <view class="v-list v-flex">
+      <block wx:for="{{saleList}}" wx:key="item" wx:for-item="tem" wx:for-index="idx">
+        <view class="v-label">{{tem.propertyName}}</view>
+        <view class="v-grid v-row">
+          <block wx:for="{{tem.valueList}}" wx:key="item">
+            <view class="{{'v-item v-select' + (item.status == 3 ? ' v-unclick' : (item.status == 1 ?'ed':''))}}" bindtap="onPressItem" data-idx="{{idx}}" data-index="{{index}}" data-item="{{item}}">
+              <text class="{{item.status == 1 ?'v-selected-str':''}}">{{item.text}}</text>
+              <text wx:if="{{item.down && item.status != 3}}" class="v-status2">下架</text>
+            </view>
+          </block>
+        </view>
+      </block>
+    </view>
+    <!-- <view class="v-flex" wx:if="{{list.length < 1}}" /> -->
+    <view class="v-row v-actions">
+      <view class="v-ok" bindtap="onConfirm">确 定</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "goods_list": "/components/goods_list/goods",
+    "list_filter": "../widget/list_filter/filter",
+    "filter_pop": "../widget/filter_pop/filter"
+  }
+}

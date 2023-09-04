@@ -1,0 +1,10 @@
+<view class="container print">
+  <header title="浏览足迹" />
+  <!-- 内容列表 -->
+  <goods_list items="{{goodsList}}" bindclick="onItemClick" />
+  
+  <view class="column center empty" wx:if="{{goodsList.length < 1}}">
+    <empty icon="empty_list" />
+    <text class="empty-str">您还没有浏览商品哦！</text>、
+  </view>
+</view>

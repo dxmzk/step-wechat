@@ -1,0 +1,4 @@
+<view class="v-empty">
+	<image class="v-empty-img" bindtap="onLoading" mode="aspectFill" src="{{icon}}" />
+	<text wx:if="{{msg}}" bindtap="onLoading" class="v-empty-text">{{msg}}</text>
+</view>

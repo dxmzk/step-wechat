@@ -1,0 +1,15 @@
+<view class="v-goods-item" bindtap="onClick" data-item="{{item}}">
+  <image class="v-item-img" lazy-load="true" mode="aspectFill" src="{{item.commodityImageUrl}}" />
+  <text class="v-item-title">{{item.commodityName}}</text>
+  <view wx:if="{{item.tag}}" class="v-item-tag-box">
+    <!-- <block wx:for="{{item.tags}}" wx:key="item"> -->
+    <text class="v-item-tag">{{item.tag}}</text>
+    <!-- </block> -->
+  </view>
+  <view class="v-price-box">
+    <text wx:if="{{item.latestPrice}}" class="v-item-price-box">¥ <text class="v-item-price">{{item.latestPrice}}</text></text>
+    <text wx:if="{{!item.latestPrice}}" class="v-item-price-no">暂无价格</text>
+    <text wx:if="{{item.originalPrice}}">{{item.originalPrice}}</text>
+    <text wx:if="{{item.saleNum > 0}}">销量{{item.saleNumStr}}</text>
+  </view>
+</view>

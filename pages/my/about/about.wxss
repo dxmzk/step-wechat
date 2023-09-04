@@ -1,0 +1,29 @@
+
+.about {
+  height: 100%;
+  align-items: center;
+}
+.ab-box {
+  width: 92%;
+  margin-top: 64rpx;
+  display: flex;
+  flex-direction: column;
+}
+.ab-text {
+  color: #121212;
+  font-size: 34rpx;
+  text-indent: 2em;
+  font-weight: 600;
+  margin-top: 16px;
+}
+.ab-email {
+  color: #121212;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.ab-img {
+  margin-top: 60rpx;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 64rpx;
+}

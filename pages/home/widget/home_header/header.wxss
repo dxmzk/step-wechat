@@ -1,0 +1,61 @@
+/* page { --height: 46px; --right: 190rpx; } */
+.v-home-header {
+  overflow: hidden; --height: 44px; --right: 190rpx;
+}
+
+.v-home-header_inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5001;
+  height: var(--height);
+  display: flex;
+  align-items: center;
+  padding-right: var(--right);
+  width: calc(100% - var(--right));
+  color: white;
+  background: linear-gradient(270deg, #fe7100 0%, #fd9c23 100%);
+}
+.v-home-header_inner2 {
+  height: 44px;
+}
+
+.v-home-header_inner .v-home-header_left {
+  position: relative;
+  width: var(--right);
+  padding-left: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+  font-size: 28rpx;
+}
+.v-home-header_left_ic {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 6rpx;
+}
+
+.v-home-header_inner .v-home-header_center {
+  font-size: 36rpx;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.v-home-header_inner .v-home-header_right {
+  margin-right: 16px;
+}
+
+.v-home-header_inner .v-shop-header-name {
+  min-width: 56rpx;
+}

@@ -1,0 +1,19 @@
+<!-- 商品规格详情 -->
+<view class="v-goods-info" catchtouchmove="true">
+  <view class="v-flex" bindtap="onClose" />
+  <view class="v-content v-column" animation="{{animData}}">
+    <view class="v-row v-line">
+      <text class="v-title v-flex">商品参数</text>
+      <image class="v-close" bindtap="onClose" src="/assets/popClose.png" />
+    </view>
+    <view class="v-list">
+      <block wx:for="{{list}}" wx:key="item">
+        <view class="v-row v-item">
+          <text class="v-label">{{item.propertyName}}</text>
+          <text class="v-value">{{item.valueText}}</text>
+        </view>
+      </block>
+    </view>
+    <view class="v-ok" bindtap="onClose">确 定</view>
+  </view>
+</view>

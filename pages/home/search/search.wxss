@@ -1,0 +1,72 @@
+.search {
+  flex: 1;
+  background-color: white;
+}
+.search-box {
+  z-index: 1;
+  width: 100%;
+  height: 88rpx;
+  min-height: 88rpx;
+  max-height: 88rpx;
+  background-color: white;
+}
+.search-view {
+  flex: 1;
+  height: 72rpx;
+  margin-left: 32rpx;
+  padding: 0 8rpx 0 18rpx;
+  border-radius: 8rpx;
+  background-color: #efefef;
+}
+.search-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 24rpx;
+}
+
+.search-input {
+  flex: 1;
+  /* text-align: center; */
+  color: #676767;
+  font-size: 28rpx;
+  line-height: 72rpx;
+}
+.search-btn {
+  color: #232323;
+  font-size: 32rpx;
+  width: 130rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+}
+.search-clear {
+  width: 32rpx;
+  height: 32rpx;
+  margin: 0 16rpx;
+}
+
+.history-box {
+  height: 80rpx;
+  margin: 24rpx 32rpx 0 32rpx;
+  color: #232323;
+  font-size: 36rpx;
+  font-weight: 500;
+}
+.history-clear {
+  width: 40rpx;
+  height: 40rpx;
+}
+.search-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12rpx 32rpx 0 32rpx;
+}
+.search-item {
+  color: #323232;
+  font-size: 28rpx;
+  padding: 6rpx 12rpx;
+  margin-bottom: 14rpx;
+  margin-right: 10rpx;
+  border-radius: 8rpx;
+  background-color: #ededed;
+}

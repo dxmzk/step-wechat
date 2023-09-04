@@ -1,0 +1,40 @@
+/*  */
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 24rpx 0 16rpx 0; */
+  /* background-color: white; */
+}
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.grid {
+  display: grid;
+
+}
+
+.footer-action {
+  z-index: 2;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  padding-bottom: constant(safe-area-inset-bottom); /*兼容 IOS<11.2*/
+  padding-bottom: env(safe-area-inset-bottom); /*兼容 IOS>11.2*/
+  background-color: white;
+}
+.footer-btn {
+  flex: 1;
+  height: 88rpx;
+  margin: 12rpx 32rpx;
+  border-radius: 16rpx;
+  text-align: center;
+  line-height: 88rpx;
+  background-color: #FE7100;
+
+  font-family: PingFangSC-Medium;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  font-weight: 500;
+}

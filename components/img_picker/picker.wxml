@@ -1,0 +1,9 @@
+<view class="v-image-picker-container">
+  <block wx:for="{{imgs}}" wx:key="index">
+    <view class="v-image-picker-box">
+      <image wx:if="{{item != null}}" class="v-image-picker-image" mode="aspectFill" src="{{item}}" bindtap="onTap" data-index="{{index}}" />
+      <image wx:if="{{upload && item == null}}" class="v-image-picker-add" src="/assets/img/upload.png" bindtap="onUpdate" />
+      <image wx:if="{{upload && item != null}}" class="v-image-picker-del" bindtap="onDel" data-index="{{index}}" src="/assets/icon/del_ic.png" />
+    </view>
+  </block>
+</view>

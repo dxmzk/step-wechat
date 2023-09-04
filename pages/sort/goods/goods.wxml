@@ -1,0 +1,41 @@
+<import src="goods.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{firstIn}}" />
+<view class="container goods">
+  <wxs src="../../../utils/wxs/goods.wxs" module="tools"/>
+  <header title="{{title}}" />
+  <!-- 搜索，筛选栏 -->
+  <view class="top-fixed">
+    <view class="search-box">
+      <view class="row ai-center search-view" bindtap="gotoSearch">
+        <image class="search-icon" src="/assets/icon/search.png" />
+        <text class="search-input">{{keyword||'请输入关键字'}}</text>
+      </view>
+    </view>
+    <list_filter bindchange="onChangeFilter" filterState="{{filter}}"/>
+  </view>
+  
+  <filter_pop 
+    wx:if="{{showFilter}}"
+    brands="{{brandList}}" 
+    categorys="{{categoryList}}" 
+    count="{{goodsCount}}"
+    defParma="{{defParma}}"
+    bindchange="onChangePop" />
+
+    <view class="fixed-height" />
+  <!-- 促销展示 -->
+  <view wx:if="{{promotion && promotion.id}}" class="row ai-center promotion-box">
+    <text class="ellip promotion-str">{{tools.activityType(promotion.rewardType)}}：以下商品可参与{{promotion.activityCondition}}活动</text>
+  </view>
+  <!-- 内容列表 -->
+  <goods_list items="{{goodsList}}" bindclick="onGoodsListClick" />
+  <view class="column center empty" wx:if="{{!firstIn && goodsCount < 1}}">
+    <empty icon="/assets/img/empty_list.png" />
+    <text class="empty-str">抱歉，没有找到您想要的商品</text>
+    <text class="empty-hint">联系家居顾问帮您找找吧</text>
+    <view class="row jc-center">
+      <text class="empty-btn">商城首页</text>
+      <text class="empty-btn">联系家居顾问</text>
+    </view>
+  </view>
+</view>

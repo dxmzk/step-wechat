@@ -1,0 +1,14 @@
+<!--  -->
+<view class="container about">
+  <header title="关于我" />
+  <image class="ab-img" src="/assets/icon/user_ic.png" />
+  <view class="ab-box">
+    <text class="ab-text">各种大牌</text>
+    <text class="ab-text">快来抢购</text>
+  </view>
+
+  <view class="ab-box" style="margin-top: 48rpx; align-items: flex-end;">
+    <text class="ab-text">百安居商城</text>
+    <text class="ab-email">上海龙阳店</text>
+  </view>
+</view>

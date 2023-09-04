@@ -1,0 +1,32 @@
+<view class="container search">
+  <header title="商品搜索" />
+
+  <!-- 搜索栏 -->
+  <view class="row ai-center search-box">
+    <view class="row ai-center search-view">
+      <image class="search-icon" src="/assets/icon/search.png" />
+      <input class="search-input" maxlength="50" value="{{keyword}}" confirm-type="search" bindconfirm="onSearch" bindinput="onInputStr" placeholder="{{searchStr||'请输入关键字'}}" />
+      <image wx:if="{{showClear}}" class="search-clear" mode="scaleToFill" src="/assets/icon/close.png" />
+    </view>
+    <view class="search-btn" bindtap="onSearch">搜索</view>
+  </view>
+
+  <view wx:if="{{historys.length > 0}}" class="row ai-center history-box">
+    <text class="flex">搜索历史</text>
+    <image class="history-clear" bindtap="onClearHistory" src="/assets/icon/clear.png" />
+  </view>
+  <view wx:if="{{historys.length > 0}}" class="search-list">
+    <block wx:for="{{historys}}" wx:key="index">
+      <text class="search-item">{{item}}</text>
+    </block>
+  </view>
+
+  <view class="row ai-center history-box">
+    <text class="flex">搜索发现</text>
+  </view>
+  <view class="search-list">
+    <block wx:for="{{hotList}}" wx:key="index">
+      <text class="search-item">{{item.title}}</text>
+    </block>
+  </view>
+</view>

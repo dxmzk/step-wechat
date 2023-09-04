@@ -1,0 +1,27 @@
+<!--  -->
+<view class="container sort">
+  <header back="{{false}}" title="分类" />
+  <search bindsearch="onSearch" bindscan="onScan" />
+  <!-- 内容栏 -->
+  <view class="row sort-box">
+    <view class="sort-tab-box">
+      <block wx:for="{{tabList}}" wx:key="index">
+        <view class="sort-tab-view {{tabIndex == item.id ? 'sort-tab-sel':''}}" bindtap="onChangeTab" data-tag="{{item.id}}">
+          <text class="">{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+    <!--  -->
+    <view wx:if="{{sortList.length > 0}}" class="sort-grid">
+      <block wx:for="{{sortList}}" wx:key="item">
+        <view class="column ai-center item-box" bindtap="onGridItem" data-categoryid="{{item.id}}" data-title="{{item.categoryName}}">
+          <image class="item-img" mode="aspectFill" src="{{item.logo}}" />
+          <view class="item-text"> {{item.categoryName}}</view>
+        </view>
+      </block>
+    </view>
+    <view wx:if="{{sortList.length < 1}}" class="flex">
+      <empty />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,118 @@
+<!--
+使用方法： 在  /pages/sort/goods/goods.wxml 引入模板
+```
+<import src="goods.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+在 /pages/sort/goods/goods.wxss 中引入样式
+```
+@import "./goods.skeleton.wxss";
+```
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="container goods">
+      <view is="components/header/header">
+        <view class="weui-navigation-bar header--weui-navigation-bar">
+          <view class="weui-navigation-bar__placeholder header--weui-navigation-bar__placeholder ios header--ios" style="padding-top: 44px;visibility: hidden;"></view>
+          <view class="weui-navigation-bar__inner header--weui-navigation-bar__inner ios header--ios" style="padding-top: 44px;color:#232323;opacity:1;background:white;">
+            <view class="weui-navigation-bar__left header--weui-navigation-bar__left" style="width:94px">
+              <view class="weui-navigation-bar__buttons header--weui-navigation-bar__buttons">
+                <view class="weui-navigation-bar__button header--weui-navigation-bar__button weui-navigation-bar__btn_goback header--weui-navigation-bar__btn_goback"></view>
+              </view>
+            </view>
+            <view class="weui-navigation-bar__center header--weui-navigation-bar__center">
+              <text class="sk-transparent sk-text-14-2857-67 sk-text" style="background-position-x: 50%;">百安居商城</text>
+            </view>
+            <view class="weui-navigation-bar__right header--weui-navigation-bar__right"></view>
+          </view>
+        </view>
+      </view>
+      <view class="top-fixed">
+        <view class="search-box">
+          <view class="row ai-center search-view">
+            <image class="search-icon sk-image"></image>
+            <text class="search-input sk-transparent sk-text-30-5556-737 sk-text">TOTO</text>
+          </view>
+        </view>
+        <view is="pages/sort/widget/list_filter/filter">
+          <view class="filter-filter--v-list-filter">
+            <view class="filter-filter--v-filter-view" data-idx="0">
+              <text class="filter-filter--v-filter-view-name sk-transparent sk-text-14-2857-383 sk-text">综合</text>
+            </view>
+            <view class="filter-filter--v-filter-view" data-idx="1">
+              <text class="filter-filter--v-filter-view-name sk-transparent sk-text-14-2857-769 sk-text">销量</text>
+            </view>
+            <view class="filter-filter--v-filter-view" data-idx="2">
+              <text class="filter-filter--v-filter-view-name sk-transparent sk-text-14-2857-569 sk-text">价格</text>
+              <image class="filter-filter--v-filter-ic sk-image"></image>
+            </view>
+            <view class="filter-filter--v-filter-view" data-idx="3">
+              <text class="filter-filter--v-filter-view-name sk-transparent sk-text-14-2857-714 sk-text">筛选</text>
+              <image class="filter-filter--v-filter-ic sk-image"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="fixed-height"></view>
+      <view is="components/goods_list/goods">
+        <view class="goods--v-goods-list">
+          <view class="goods--v-list">
+            <view is="components/goods_list/goods_item/goods_item">
+              <view class="item--v-goods-item" data-item="[object Object]">
+                <image class="item--v-item-img sk-image" lazy-load="true" mode="aspectFill"></image>
+                <text class="item--v-item-title sk-transparent sk-text-3-1250-808 sk-text">TOTO台下式洗面器TOTO LW587</text>
+                <view class="item--v-price-box">
+                  <text class="item--v-item-price-box sk-transparent">¥ <text class="item--v-item-price sk-transparent sk-text--2-9412-508 sk-text">989</text></text>
+                  <text class="sk-transparent sk-text-14-2857-62 sk-text">销量31</text>
+                </view>
+              </view>
+            </view>
+            <view is="components/goods_list/goods_item/goods_item">
+              <view class="item--v-goods-item" data-item="[object Object]">
+                <image class="item--v-item-img sk-image" lazy-load="true" mode="aspectFill"></image>
+                <text class="item--v-item-title sk-transparent sk-text-3-1250-21 sk-text">TOTO 镜箱 LMFB075SKD</text>
+                <view class="item--v-price-box">
+                  <text class="item--v-item-price-box sk-transparent">¥ <text class="item--v-item-price sk-transparent sk-text--2-9412-532 sk-text">2279</text></text>
+                  <text class="sk-transparent sk-text-14-2857-577 sk-text">销量50</text>
+                </view>
+              </view>
+            </view>
+            <view is="components/goods_list/goods_item/goods_item">
+              <view class="item--v-goods-item" data-item="[object Object]">
+                <image class="item--v-item-img sk-image" lazy-load="true" mode="aspectFill"></image>
+              </view>
+            </view>
+          </view>
+          <view class="goods--v-list2">
+            <view is="components/goods_list/goods_item/goods_item">
+              <view class="item--v-goods-item" data-item="[object Object]">
+                <image class="item--v-item-img sk-image" lazy-load="true" mode="aspectFill"></image>
+                <text class="item--v-item-title sk-transparent sk-text-3-1250-740 sk-text">TOTO LW1536B台下盆</text>
+                <view class="item--v-price-box">
+                  <text class="item--v-item-price-box sk-transparent">¥ <text class="item--v-item-price sk-transparent sk-text--2-9412-41 sk-text">799</text></text>
+                  <text class="sk-transparent sk-text-14-2857-577 sk-text">销量50</text>
+                </view>
+              </view>
+            </view>
+            <view is="components/goods_list/goods_item/goods_item">
+              <view class="item--v-goods-item" data-item="[object Object]">
+                <image class="item--v-item-img sk-image" lazy-load="true" mode="aspectFill"></image>
+                <text class="item--v-item-title sk-transparent sk-text-3-1250-904 sk-text">TOTO水箱面板</text>
+                <view class="item--v-price-box">
+                  <text class="item--v-item-price-box sk-transparent">¥ <text class="item--v-item-price sk-transparent sk-text--2-9412-50 sk-text">209</text></text>
+                  <text class="sk-transparent sk-text-14-2857-252 sk-text">销量4</text>
+                </view>
+              </view>
+            </view>
+            <view is="components/goods_list/goods_item/goods_item">
+              <view class="item--v-goods-item" data-item="[object Object]">
+                <image class="item--v-item-img sk-image" lazy-load="true" mode="aspectFill"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

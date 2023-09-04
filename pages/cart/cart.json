@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "goods_list": "/components/goods_list/goods",
+    "coupon_info": "./widget/coupon_info/info",
+    "goods_type": "./widget/goods_type/goods_type",
+    "input_count": "./widget/input_count/count",
+    "promotion": "./widget/promotion/promotion"
+  }
+}

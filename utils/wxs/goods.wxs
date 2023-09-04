@@ -1,0 +1,52 @@
+// 商品相关工具类
+
+// 处理图片地址
+function goodsUrl(url) {
+  var itemUrl = url || "";
+  if (itemUrl.indexOf("?") > -1) {
+    itemUrl = itemUrl.split("?")[0];
+  }
+  return itemUrl;
+}
+// 获取活动副标题
+function getActivityStr(item) {
+  var str = item.activityName;
+  if (item.shareAmount > 0) {
+    str += "已减" + item.shareAmount + "元";
+  }
+  if (item.addAmount > 0) {
+    str += "，再凑" + item.addAmount + "元，可减" + item.addShareAmount + "元";
+  }
+  return str;
+}
+// 促销类型
+function activityType(tag) {
+  switch (tag) {
+    case 0:
+      return "返券";
+    case 1:
+    case 3:
+      return "满减";
+    case 2:
+    case 4:
+      return "满折";
+    default:
+      return "折扣";
+  }
+}
+// 控制商品是否可选状态
+function canChoose(item, edit) {
+  var isCity = item.distributeAddress == 1; // 是否同城
+  var opacity = item.state == 1 ? "" : " opacity";
+  if (!canChoose && !edit && item.state == 1) {
+    opacity = " opacity";
+  }
+  return opacity;
+}
+
+module.exports = {
+  goodsUrl: goodsUrl,
+  activityType: activityType,
+  getActivityStr: getActivityStr,
+  canChoose: canChoose
+};

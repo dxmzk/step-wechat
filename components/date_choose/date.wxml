@@ -1,0 +1,23 @@
+<view class="v-date-choose">
+  <view class="v-flex" bindtap="onClose" />
+  <view class="v-content v-column">
+    <view class="v-row">
+      <text class="v-cancel" bindtap="onClose">取消</text>
+      <text class="v-flex v-title">选择时间</text>
+      <text class="v-cancel v-ok" bindtap="onTap">确定</text>
+    </view>
+    <view wx:if="{{years.length > 0}}">
+      <picker-view indicator-style="height: 44px;" class="v-picker-box" value="{{value}}" bindchange="onChange">
+        <picker-view-column>
+          <view wx:for="{{years}}" wx:key="index" class="v-date-str">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{months}}" wx:key="index" class="v-date-str">{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{days}}" wx:key="index" class="v-date-str">{{item}}日</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,79 @@
+<!--  -->
+<view class="container my">
+  <header fixed="{{false}}" back="{{false}}" opacity="{{0}}" />
+  <!-- 顶部栏 -->
+  <image class="top-bg" src="{{topBgUrl}}"/>
+  <view class="top-layout">
+    <image class="user-icon" bindtap="getUserProfile" src="{{user.headIcon||'/assets/icon/user.png'}}" />
+    <view class="column" bindtap="onUserInfo">
+      <text class="user-name">{{user.nickName}}</text>
+      <text class="user-phone">{{user.phoneStr}}</text>
+    </view>
+    <view class="flex" />
+    <view class="row center vip-code" bindtap="gotoVipCard">
+      <image class="code-icon" src="/assets/icon/vip_code.png" />
+      <text class="code-str">会员卡</text>
+    </view>
+  </view>
+  <!-- tab -->
+  <view class="row tab-box">
+    <view class="column center tab-view" hover-class="btn-hover" data-idx="0" bindtap="onTabClick">
+      <text class="tab-num">{{topData.point}}</text>
+      <text class="tab-value">积分</text>
+    </view>
+    <view class="column center tab-view" hover-class="btn-hover" data-idx="1" bindtap="onTabClick">
+      <text class="tab-num">{{topData.couponCount}}</text>
+      <text class="tab-value">优惠券</text>
+      <view wx:if="{{isCouponExpired}}" class="top-dot-text">快过期</view>
+    </view>
+    <view class="column center tab-view" hover-class="btn-hover3" data-idx="2" bindtap="onTabClick">
+      <text class="tab-num">{{topData.cardCount}}</text>
+      <text class="tab-value">足迹</text>
+    </view>
+  </view>
+  <!-- 订单 -->
+  <view class="row label-box">
+    <text class="flex label-name">我的订单</text>
+    <view class="row" bindtap="onOrderClick" data-idx="0">
+      <text class="tab-value">全部订单</text>
+      <image class="label-icon" src="/assets/icon/arrow_right.png" />
+    </view>
+  </view>
+  <view class="row tab-box">
+    <view class="column center tab2-view" bindtap="onOrderClick" data-idx="1">
+      <image class="tab2-icon" src="/assets/icon/my_dzf.png" />
+      <view class="tab2-value">待支付</view>
+      <view wx:if="{{orderInfo.waitBuyerPayCount > 0}}" class="red-dot-text">{{orderInfo.waitBuyerPayCount}}</view>
+    </view>
+    <view class="column center tab2-view" bindtap="onOrderClick" data-idx="2">
+      <image class="tab2-icon" src="/assets/icon/my_dfh.png" />
+      <view class="tab2-value">待发货</view>
+      <view wx:if="{{orderInfo.waitSellerSendGoodsCount > 0}}" class="red-dot-text">{{orderInfo.waitSellerSendGoodsCount}}</view>
+    </view>
+    <view class="column center tab2-view" bindtap="onOrderClick" data-idx="3">
+      <image class="tab2-icon" src="/assets/icon/my_dsh.png" />
+      <view class="tab2-value">待收货</view>
+      <view wx:if="{{orderInfo.waitBuyerConfirmGoodsCount > 0}}" class="red-dot-text">{{orderInfo.waitBuyerConfirmGoodsCount}}</view>
+    </view>
+    <view class="column center tab2-view" bindtap="onOrderClick" data-idx="4">
+      <image class="tab2-icon" src="/assets/icon/my_tksh.png" />
+      <view class="tab2-value">退款售后</view>
+    </view>
+  </view>
+  <!-- 优惠券领取 -->
+  <view class="activity-box" bindtap="gotoCouponPage">
+    <image class="activity-img" mode="widthFix" src="{{bannerUrl}}"/>
+  </view>
+  <!-- 内容列表 -->
+  <view class="row label-box">
+    <text class="flex label-name">我的服务</text>
+  </view>
+  <view class="menu-list">
+    <block wx:for="{{menulist}}" wx:key="index">
+      <view class="column center menu-box" bindtap="onMenuClick" data-idx="{{index}}">
+        <image class="menu-icon" src="{{item.icon}}" />
+        <view class="menu-value">{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>

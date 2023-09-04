@@ -1,0 +1,65 @@
+.v-date-choose {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  font-family: PingFangSC-Regular;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.v-date-choose .v-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.v-date-choose .v-column {
+  display: flex;
+  flex-direction: column;
+}
+.v-date-choose .v-flex {
+  flex: 1;
+}
+.v-date-choose .v-line {
+  border-bottom: solid #f3f3f3 1px;
+}
+.v-date-choose .v-content {
+  z-index: 9;
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
+  background-color: white;
+  max-height: 600rpx;
+  min-height: 600rpx;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  /* transform: translate(0, 99%); */
+}
+.v-date-choose .v-cancel {
+  color: #323232;
+  font-size: 32rpx;
+  padding: 0 32rpx;
+}
+.v-date-choose .v-ok {
+  color: #FE7100;
+}
+.v-date-choose .v-title {
+  color: #232323;
+  font-size: 36rpx;
+  font-weight: 500;
+  font-family: PingFangSC-Medium;
+  text-align: center;
+  padding: 24rpx 0;
+  line-height: 52rpx;
+}
+
+.v-date-choose .v-picker-box {
+  width: 100%; 
+  height: 500rpx;
+}
+.v-date-choose .v-date-str {
+  line-height: 88rpx; 
+  text-align: center;
+}

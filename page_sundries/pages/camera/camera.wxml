@@ -1,0 +1,17 @@
+<view class="container camera">
+  <view wx:if="{{!isTask}}" class="flex column">
+    <camera id="camers-id" class="photo" device-position="{{back ? 'back':'front'}}" flash="{{auto? 'auto':'on'}}" style="height: {{height}}px;" />
+
+    <view class="column mark">
+      <text class="date">{{curDate}}</text>
+      <text class="address">地址：上海市浦东新区上塘路2000号</text>
+      <text class="name">操作人：张三</text>
+    </view>
+    <view class="row ai-center flex actions">
+      <image class="light" bindtap="onOpenLight" />
+      <view class="take" bindtap="onTakePhone" />
+      <view class="light" bindtap="onConver" />
+    </view>
+  </view>
+  <canvas hidden="{{!isTask}}" class="canvas-box" id="canvas_id" type="2d" style="width:{{width}}px;height:{{height}}px;"></canvas>
+</view>

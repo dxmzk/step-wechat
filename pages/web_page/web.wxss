@@ -1,0 +1,3 @@
+.web-page {
+  flex: 1;
+}

@@ -1,0 +1,32 @@
+<view class="container">
+  <header title="商品清单" />
+
+  <block wx:for="123" wx:key="idx" wx:for-index="idx" wx:for-item="list">
+    <view class="list">
+      <view class="row ai-center">
+        <view class="list-logo" />
+        <text class="flex">仓库发货</text>
+        <text>运费</text>
+        <text>¥32</text>
+        <image class="right-ic" src="/assets/icon/info_grey.png" />
+      </view>
+      <block wx:for="123" wx:key="index">
+        <view class="item">
+
+          <view class="row">
+            <image class="goods-img" />
+            <view class="column flex">
+              <text>名称</text>
+              <text>规格</text>
+              <text>7天无理由退换货</text>
+            </view>
+            <view class="column">
+              <text>¥534</text>
+              <text>x2</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

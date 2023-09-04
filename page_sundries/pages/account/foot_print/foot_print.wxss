@@ -1,0 +1,16 @@
+.print {
+  flex: 1;
+}
+
+.empty-str {
+  color: #676767;
+  font-size: 32rpx;
+  line-height: 44rpx;
+}
+.empty-hint {
+  color: #979797;
+  font-size: 28rpx;
+  line-height: 34rpx;
+  margin-top: 8rpx;
+  margin-bottom: 24rpx;
+}

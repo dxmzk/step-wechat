@@ -1,0 +1,162 @@
+/* components/goods_detail/shop_status/shop_status.wxss */
+.v-shop-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  font-family: PingFangSC-Regular;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.v-shop-status .v-row {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+}
+.v-shop-status .v-column {
+  display: flex;
+  flex-direction: column;
+}
+.v-shop-status .v-flex {
+  flex: 1;
+}
+.v-shop-status .v-line {
+  border-bottom: solid #f3f3f3 1px;
+}
+.v-shop-status .v-content {
+  z-index: 9;
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
+  background-color: white;
+  max-height: 70%;
+  min-height: 60%;
+  overflow: scroll;
+  padding-bottom: constant(safe-area-inset-bottom); /*兼容 IOS<11.2*/
+  padding-bottom: env(safe-area-inset-bottom); /*兼容 IOS>11.2*/
+  transform: translate(0, 99%);
+}
+.v-shop-status .v-price {
+  flex: 1;
+  justify-content: flex-end;
+  margin: 32rpx 0;
+  color: #878787;
+
+  font-size: 24rpx;
+  color: #f56105;
+}
+.v-shop-status .v-new-price {
+  font-size: 36rpx;
+  font-weight: 500;
+}
+.v-shop-status .v-old-price {
+  font-size: 24rpx;
+  color: #999999;
+  padding-left: 16rpx;
+  text-decoration: line-through;
+}
+.v-shop-status .v-goods-code {
+  color: #878787;
+  font-size: 24rpx;
+}
+
+.v-shop-status .v-close {
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 32rpx;
+  margin-right: 32rpx;
+}
+.v-shop-status .v-img {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 8rpx;
+  margin: 32rpx 32rpx;
+  background-color: #efefef;
+}
+.v-shop-status .v-icon {
+  width: 26rpx;
+  height: 18rpx;
+  margin-left: 12rpx;
+}
+.v-shop-status .v-status-box {
+  height: 80rpx;
+  min-height: 80rpx;
+  margin: 0 32rpx;
+  align-items: center;
+
+  font-size: 28rpx;
+  color: #666666;
+}
+.v-shop-status .v-status-title {
+  flex: 1;
+  font-size: 32rpx;
+  color: #232323;
+  font-weight: 500;
+  font-family: PingFangSC-Medium;
+}
+.v-shop-status .v-list {
+  flex: 1;
+  overflow: scroll;
+  padding: 0 0 48rpx 32rpx;
+}
+.v-shop-status .v-empty {
+  color: #999999;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 48rpx;
+  flex: 1;
+}
+.v-shop-status .v-item {
+  padding-right: 32rpx;
+  height: 92rpx;
+  font-size: 22rpx;
+  color: #676767;
+  align-items: center;
+}
+.v-shop-status .v-status-type {
+  /* background-color: rgba(100, 100, 100, 0.1); */
+  background-color: #f3f3f3;
+  border-radius: 4rpx;
+  padding: 4rpx 8rpx;
+  line-height: 24rpx;
+}
+.v-shop-status .v-status-type2 {
+  color: #0095eb;
+  background-color: #e5f6ff;
+}
+.v-shop-status .v-distance {
+  font-size: 24rpx;
+  color: #999999;
+}
+.v-shop-status .v-name {
+  font-size: 28rpx;
+  color: #232323;
+  margin: 0 16rpx 0 16rpx;
+  font-weight: 500;
+  font-family: PingFangSC-Medium;
+}
+.v-shop-status .v-actions {
+  margin: 24rpx 32rpx;
+  /* justify-content: space-between; */
+  justify-content: center;
+}
+.v-shop-status .v-ok {
+  /* width: 330rpx; */
+  width: 100%;
+  height: 80rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #fe7100;
+
+  font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  color: #ffffff;
+  font-weight: 500;
+}
+.v-shop-status .v-cancel {
+  background-color: #ffb800;
+}

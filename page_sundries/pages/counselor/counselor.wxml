@@ -1,0 +1,6 @@
+<!-- 在线顾问 -->
+<view class="p-page">
+    <image class="p-pic" mode="aspectFit" src="{{imgUrl}}" />
+    <view class="p-btn p-abs" bindtap="onAddWechat">免费咨询</view>
+    <image class="p-icon" src="/assets/hand_ic.png"/>
+</view>

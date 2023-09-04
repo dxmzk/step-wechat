@@ -1,0 +1,84 @@
+.v-goods-item {
+  width: auto;
+  margin: 24rpx 16rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.v-goods-item .v-row {
+  display: flex;
+}
+.v-goods-item .v-column {
+  display: flex;
+  flex-direction: column;
+}
+.v-goods-item .v-item-img {
+  width: 330rpx;
+  height: 330rpx;
+  border-radius: 8rpx;
+  background-color: #F6F6F6;
+}
+.v-goods-item .v-item-title {
+  color: #232323;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 16px;
+  max-width: 100%;
+  max-height: 16px;
+  margin-top: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.v-goods-item .v-item-tag-box {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 18px;
+  max-height: 18px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+.v-goods-item .v-item-tag {
+  height: 16px;
+  line-height: 14px;
+  color: #FE7100;
+  font-size: 11px;
+  padding: 0 8rpx;
+  margin-right: 8rpx;
+  border-radius: 2px;
+  border: solid 1px #FE7100;
+  
+  max-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+.v-goods-item .v-price-box {
+  margin-top: 6px;
+  display: flex;
+  align-items: baseline;
+  color: #979797;
+  font-size: 22rpx;
+}
+.v-goods-item .v-item-price-box {
+  color: #FF203D;
+  font-size: 22rpx;
+  font-weight: 600;
+  line-height: 50rpx;
+  margin-right: 24rpx;
+}
+.v-goods-item .v-item-price-no {
+  color: #979797;
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-top: 6px;
+  line-height: 40rpx;
+  margin-right: 24rpx;
+}
+.v-goods-item .v-item-price {
+  font-size: 36rpx;
+  line-height: 34rpx;
+}

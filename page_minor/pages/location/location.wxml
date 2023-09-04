@@ -1,0 +1,32 @@
+<view class="container location">
+  <header title="选择地址" />
+  <view class="p-top-ads-box">当前配送至</view>
+  <view class="p-ads-box" bindtap="getLocation">
+    <view class="p-row cur-ads-box" bindtap="getLocation">
+      <image class="p-icon" src="/assets/icon/address.png" />
+      <text class="p-address">{{address.cityName||'未开启定位'}}</text>
+    </view>
+  </view>
+
+  <view class="p-top-ads-box">从我的收货地址选择</view>
+  <view wx:if="{{addressList.length > 0}}" class="p-list bang">
+    <block wx:for="{{addressList}}" wx:key="item">
+      <view class="p-row p-item" bindtap="onItemPress" data-item="{{item}}">
+        <image class="p-icon p-icon2" src="/assets/icon/address.png" />
+        <view>
+          <view class="item-top-box {{item.canUse ? '':'item-unuse'}}">
+            <text wx:if="{{item.isDefaultAddress == 1}}" class="item-def-str">默认</text>
+            <text>{{item.userName}} {{item.relationPhone}}</text>
+          </view>
+          <view class="item-address-str {{item.canUse ? '':'item-unuse'}}">{{item.cityName||''}}{{item.districtName||''}}{{item.streetName||''}}{{item.address}}</view>
+          <text wx:if="{{!item.canUse}}" class="item-address-status">该位置不在配送范围内</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <empty wx:if="{{addressList.length < 1}}" msg="您还没有收货地址" />
+
+  <viwe class="p-bottom bang">
+    <view class="bottom-btn" bindtap="onChooseCity">选择其他地区</view>
+  </viwe>
+</view>

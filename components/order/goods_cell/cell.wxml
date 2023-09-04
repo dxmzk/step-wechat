@@ -1,0 +1,23 @@
+<view class="v-goods-cell">
+  <block wx:for="{{goods}}" wx:key="index">
+    <view class="v-goods-item">
+      <image class="v-goods-img" src="{{item.itemUrl}}" />
+      <view class="v-goods-mark">
+        <text class="v-goods-status">下架</text>
+      </view>
+      <view class="v-flex v-column">
+        <text class="v-title v-ellips">{{item.itemName}}</text>
+        <text class="v-type v-ellip">规格</text>
+        <view>
+          <text class="v-tag">7天无理由退换货</text>
+        </view>
+        <text class="v-alert">购买数量超过库存</text>
+      </view>
+      <view class="v-column">
+        <text class="v-price"><text class="v-unit">¥</text>{{item.salePrice}}</text>
+        <text class="v-count">x{{item.quantity}}</text>
+      </view>
+    </view>
+  </block>
+
+</view>
