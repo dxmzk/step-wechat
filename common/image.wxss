@@ -1,0 +1,21 @@
+/* 图片样式 */
+.right-ic {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 8rpx;
+}
+
+.goods-img {
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 6rpx;
+}
+.item-icon {
+  width: 38rpx;
+  height: 38rpx;
+}
+.next-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 12rpx;
+}

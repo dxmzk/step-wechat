@@ -1,0 +1,8 @@
+<view class="v-row v-app-search">
+  <view class="v-row v-search-box" bindtap="onSearch">
+    <image class="v-search-icon" src="/assets/icon/search.png"/>
+    <text class="v-search-text">{{keyword || '请输入关键字'}}</text>
+    <view wx:if="{{inputStr}}" class="v-search-btn">搜索</view>
+  </view>
+  <image class="v-search-scan" bindtap="onScan" mode="scaleToFill" src="/assets/icon/scan.png" />
+</view>

@@ -1,0 +1,134 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/sort/sort",
+    "pages/scan/scan",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/my/login/login",
+    "pages/web_page/web",
+    "pages/home/search/search",
+    "pages/home/activity/activity",
+    "pages/home/goods_detail/detail",
+    "pages/sort/goods/goods",
+    "pages/cart/payment/payment",
+    "pages/cart/inventory/inventory",
+    "pages/my/vip_code/code",
+    "pages/my/setting/setting",
+    "pages/my/red_packet/packet"
+  ],
+  "subpackages": [
+    {
+      "root": "page_sundries",
+      "pages": [
+        "pages/account/foot_print/foot_print",
+        "pages/account/password/password",
+        "pages/account/score/score",
+        "pages/account/sign/sign",
+        "pages/account/send_card/card",
+        "pages/account/verify_phone/phone",
+        "pages/brand/brand",
+        "pages/shop/shop",
+        "pages/counselor/counselor",
+        "pages/invoice/invoice",
+        "pages/invoice/info/info",
+        "pages/invoice/detail/detail",
+        "pages/logistics/logistics",
+        "pages/logistics/progress/progress",
+        "pages/order/order",
+        "pages/order/detail/detail",
+        "pages/pay/pay",
+        "pages/pay/cash_center/center",
+        "pages/preview/preview",
+        "pages/message/message"
+      ]
+    },
+    {
+      "root": "page_minor",
+      "pages": [
+        "pages/address/address",
+        "pages/address/amap/amap",
+        "pages/address/edit/edit",
+        "pages/address/search/search",
+        "pages/location/location",
+        "pages/location/city/city",
+        "pages/coupon/coupon",
+        "pages/coupon/goods/goods",
+        "pages/coupon/detail/detail"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "百安居商城",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#909090",
+    "selectedColor": "#121212",
+    "list": [
+      {
+        "selectedIconPath": "assets/tab/home_on.png",
+        "iconPath": "assets/tab/home.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "assets/tab/sort_on.png",
+        "iconPath": "assets/tab/sort.png",
+        "pagePath": "pages/sort/sort",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "assets/tab/scan.png",
+        "iconPath": "assets/tab/scan.png",
+        "pagePath": "pages/scan/scan",
+        "text": "扫一扫"
+      },
+      {
+        "selectedIconPath": "assets/tab/cart_on.png",
+        "iconPath": "assets/tab/cart.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "assets/tab/user_on.png",
+        "iconPath": "assets/tab/user.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "preloadRule": {
+    "pages/home/home": {
+      "network": "wifi",
+      "packages": [
+        "page_sundries",
+        "page_minor"
+      ]
+    }
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "empty": "/components/empty/empty",
+    "header": "/components/header/header",
+    "toptip": "/components/toptips/toptips"
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息用于显示附近店铺"
+    }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 30000
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

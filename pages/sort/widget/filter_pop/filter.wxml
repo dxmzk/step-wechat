@@ -1,0 +1,60 @@
+<view class="v-filter-pop">
+  <view class="v-mark" bindtap="onClose"/>
+  <view class="v-column v-filter-box">
+    <view class="v-top-box" />
+    <view class="v-flex v-column">
+      <!-- 品牌 -->
+      <view wx:if="{{brandList.length > 0}}" class="v-box">
+        <text class="v-box-name">品牌</text>
+        <text bindtap="onExpandList">{{brandExpand ? "收起":"展开"}}</text>
+        <image class="v-down-ic" bindtap="onExpandList" 
+          src="/assets/icon/arrow_{{brandExpand ? 'up':'down'}}.png" />
+      </view>
+
+      <view wx:if="{{brandList.length > 0}}" class="v-filter-grid">
+        <block wx:for="{{brandList}}" wx:key="index">
+          <text 
+            class="{{item.check ? 'v-filter-name-on' : 'v-filter-grid-name'}}"
+            wx:if="{{item.brandName && index < (brandExpand ? 10000:8)}}" 
+            bindtap="onItemClick" 
+            data-tag="brand"
+            data-item="{{item}}">{{item.brandName}}</text>
+        </block>
+      </view>
+      <!-- 分类 -->
+      <view wx:if="{{categoryList.length > 0}}" class="v-box">
+        <text class="v-box-name">分类</text>
+        <text bindtap="onExpandList2">{{brandExpand ? "收起":"展开"}}</text>
+        <image class="v-down-ic" bindtap="onExpandList2" 
+          src="/assets/icon/arrow_{{categoryExpand ? 'up':'down'}}.png" />
+      </view>
+
+      <view wx:if="{{categoryList.length > 0}}" class="v-filter-grid">
+        <block wx:for="{{categoryList}}" wx:key="index">
+          <text 
+            class="{{item.check ? 'v-filter-name-on':'v-filter-grid-name'}}"
+            wx:if="{{index < (categoryExpand ? 10000:6)}}" 
+            bindtap="onItemClick" 
+            data-tag="category"
+            data-item="{{item}}">{{item.categoryName}}</text>
+        </block>
+      </view>
+      <!-- 价格 -->
+      <view class="v-box">
+        <text class="v-box-name">价格</text>
+      </view>
+      <view class="v-row v-price-box">
+        <input class="v-price-view" type="number" bindinput="onInputStart" 
+          value="{{salePriceStart}}" maxlength="9" placeholder="最低价" />
+        <view class="v-line" />
+        <input class="v-price-view" type="number" bindinput="onInputEnd"
+          value="{{salePriceEnd}}" maxlength="9" placeholder="最高价" />
+      </view>
+    </view>
+    <!-- 底部按钮 -->
+    <view class="v-box v-footer">
+      <text class="v-footer-btn v-btn-str" bindtap="onReset">重置</text>
+      <text class="v-footer-btn v-btn-str v--btn2" bindtap="onCommit">确定<text wx:if="{{goodsNum > 0}}" class="v-goods-num">({{goodsNum}}件商品)</text></text>
+    </view>
+  </view>
+</view>

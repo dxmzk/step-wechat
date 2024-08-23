@@ -1,0 +1,8 @@
+// 距离格式化
+function fmtDistance(distance) {
+
+}
+
+module.exports = {
+  fmtDistance: fmtDistance
+}

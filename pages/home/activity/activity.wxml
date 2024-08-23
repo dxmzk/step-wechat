@@ -1,0 +1,3 @@
+<view class="activitys">
+  <web-view class="activitys" bindload="onWebLoaded" bindmessage="onWebMessage" src="{{url}}"/>
+</view>

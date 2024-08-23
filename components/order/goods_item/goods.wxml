@@ -1,0 +1,23 @@
+<view class="v-order-goods">
+  <view wx:if="{{goods.length > 1}}" class="v-goods-much" bindtap="onLookGoods">
+    <view class="v-row v-imgs-box">
+      <block wx:for="{{goods}}" wx:key="index">
+        <image class="v-goods-img" src="{{item.productThumbPic}}" />
+      </block>
+    </view>
+    <text class="v-goods-num">共3件</text>
+  </view>
+  <image class="v-goods-img" src="{{goods[0].productThumbPic}}" />
+  <view class="v-flex v-column">
+    <text class="v-title v-ellips">{{goods[0].productName}}</text>
+    <text class="v-type v-ellip">{{goods[0].productName}}</text>
+    <view>
+      <text class="v-tag">7天无理由退换货</text>
+    </view>
+    <text class="v-alert">购买数量超过库存</text>
+  </view>
+  <view class="v-column v-pc-box">
+    <text class="v-price"><text class="v-unit">¥</text>{{goods[0].salePrice}}</text>
+    <text class="v-count">x{{goods[0].quantity}}</text>
+  </view>
+</view>

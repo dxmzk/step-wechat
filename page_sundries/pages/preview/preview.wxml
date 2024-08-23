@@ -1,0 +1,12 @@
+<!--pages/goods/preview/preview.wxml-->
+<view class="p-page">
+    <swiper class="swiper" bindchange="onChangePage">
+        <block wx:for="{{imgList}}" wx:key="item">
+            <swiper-item>
+                <video id="goods_video" wx:if="{{item.type == 0}}" class="swiper-item" src="{{item.url}}" />
+                <image wx:if="{{item.type == 1}}" class="swiper-item" mode="aspectFit" src="{{item.url}}" bindtap="onImgLook" data-index="{{index}}"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="swiper-index">{{curIndex}} / {{imgList.length}}</view>
+</view>

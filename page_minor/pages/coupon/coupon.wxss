@@ -1,0 +1,171 @@
+.coupon {
+  position: relative;
+}
+.coupon-tab-height {
+  height: 80rpx;
+}
+.coupon-icon {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 12rpx;
+  margin-right: 16rpx;
+  border-radius: 50%;
+  background-color: #ffedeb;
+}
+.coupon-right {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 8rpx;
+}
+
+.coupon-tab-box {
+  height: 104rpx;
+  align-items: center;
+  margin: 16rpx 32rpx;
+  padding: 0 24rpx 0 32rpx;
+  border-radius: 16rpx;
+  background-color: white;
+}
+
+.coupon-tab-more {
+  flex: 1;
+  color: #232323;
+  font-family: PingFangSC-Medium;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.coupon-tab-center {
+  color: #979797;
+  font-size: 24rpx;
+}
+
+
+.item-box {
+  height: 220rpx;
+  margin: 0 32rpx 20rpx 32rpx;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2rpx 4rpx 0 rgba(0, 0, 0, 0.05);
+}
+.item-up {
+  z-index: 1;
+  height: 130rpx;
+  margin-left: 32rpx;
+}
+.item-down {
+  z-index: 1;
+  height: 90rpx;
+  margin: 0 32rpx;
+  align-items: center;
+}
+.item-bg-ic {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 220rpx;
+  position: absolute;
+}
+
+.item-status-ic {
+  top: -50rpx;
+  right: 8rpx;
+  width: 144rpx;
+  height: 144rpx;
+  position: absolute;
+}
+
+.title-box {
+  flex: 1;
+  margin: 32rpx 32rpx 0 0;
+}
+.item-title {
+  max-width: 400rpx;
+  color: #232323;
+  font-size: 32rpx;
+  font-weight: 500;
+  line-height: 44rpx;
+  font-family: PingFangSC-Semibold;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.item-subtitle {
+  line-height: 32rpx;
+  font-size: 22rpx;
+  color: #979797;
+  margin-top: 4rpx;
+}
+.state-unit {
+  padding-right: 32rpx;
+  position: relative;
+  white-space: nowrap;
+}
+.item-state {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 120rpx;
+  height: 36rpx;
+  background: #fef0e5;
+  border-radius: 0 8rpx;
+
+  font-size: 22rpx;
+  color: #fe7100;
+  text-align: center;
+  line-height: 24rpx;
+}
+.item-unit {
+  font-size: 28rpx;
+  color: #ff4b33;
+  margin-top: 40rpx;
+  margin-right: 16rpx;
+}
+.item-price {
+  color: #232323;
+  font-family: AlibabaSans102-Medium;
+  font-size: 64rpx;
+  color: #ff4b33;
+  font-weight: 500;
+  line-height: 56rpx;
+}
+.item-date {
+  color: #979797;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  flex: 1;
+}
+.item-qecode {
+  color: #ff4b33;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  text-align: center;
+
+  width: 120rpx;
+  height: 48rpx;
+  margin-left: 18rpx;
+  border-radius: 24rpx;
+  border: solid 1px #ff4b33;
+}
+
+.item-use {
+  color: white;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  text-align: center;
+
+  width: 120rpx;
+  height: 48rpx;
+  margin-left: 18rpx;
+  border-radius: 24rpx;
+  background-color: #ff4b33;
+}
+
+.footer {
+  font-size: 24rpx;
+  color: #979797;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+}

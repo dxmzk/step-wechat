@@ -1,0 +1,18 @@
+<view class="v-address-item">
+  <block wx:for="{{list}}" wx:key="index">
+    <view class="v-row v-item-box" style="{{(use == 0 || item.isDeliverRegion == 1) ? '' : 'opacity: 0.6;'}}">
+      <view class="v-flex v-column" bindtap="onClickItem" data-item="{{item}}">
+        <text class="v-user-str">
+          <text>{{item.userName}}</text>
+          <text class="v-phone">{{item.phoneStr}}</text>
+        </text>
+        <text class="v-ads-str">
+          <text wx:if="{{item.isDefault == 1}}" class="v-item-def-str">默认</text>
+          <!-- <text class="v-item-def-str v-def-str2">家</text> -->
+          <text>{{item.shortAddress || item.shortRemarkAddress || ''}} {{item.remarkAddress || ''}}</text>
+        </text>
+      </view>
+      <image class="v-edit-ic" src="/page_minor/assets/icon/edit_ic.png" bindtap="onEditAddress" data-item="{{item}}" />
+    </view>
+  </block>
+</view>

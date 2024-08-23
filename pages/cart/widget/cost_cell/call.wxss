@@ -1,0 +1,55 @@
+.v-cast-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.v-cast-cell .v-row {
+  display: flex;
+  flex-direction: row;
+}
+.v-cast-cell .v-flex {
+  flex: 1;
+}
+.v-cast-cell .v-item {
+  line-height: 36rpx;
+  font-size: 28rpx;
+  color: #363636;
+  /* margin-left: 32rpx; */
+  padding: 24rpx 30rpx 24rpx 0;
+  border-bottom: solid 1px #efefef;
+}
+.v-cast-cell .v-str-tag {
+  width: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #ffffff;
+  margin-right: 16rpx;
+  border-radius: 4rpx;
+  background-color: #fe7100;
+}
+.v-cast-cell .v-item-value {
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  font-size: 32rpx;
+  color: #323232;
+}
+.v-cast-cell .v-item-hint {
+  font-size: 28rpx;
+  color: #979797;
+}
+.v-cast-cell .v-item-money {
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  font-size: 32rpx;
+  color: #fe7100;
+}
+.v-cast-cell .v-unit {
+  font-size: 22rpx;
+}
+.v-cast-cell .v-item-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 2rpx;
+  margin-left: 4rpx;
+}

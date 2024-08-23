@@ -1,0 +1,15 @@
+<view class="container coupon-goods">
+  <header title="{{title}}" />
+  <!-- 内容列表 -->
+  <goods_list items="{{goodsList}}" bindclick="onItemClick" />
+  
+  <view class="column center empty" wx:if="{{goodsList.length < 1}}">
+    <empty icon="/assets/img/empty_list.png" />
+    <text class="empty-str">抱歉，没有找到您想要的商品</text>
+    <text class="empty-hint">联系家居顾问帮您找找吧</text>
+    <view class="row jc-center">
+      <text class="empty-btn">商城首页</text>
+      <text class="empty-btn">联系家居顾问</text>
+    </view>
+  </view>
+</view>

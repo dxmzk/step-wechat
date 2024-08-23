@@ -1,0 +1,38 @@
+<view class="container coupon">
+  <header title="优惠券" />
+  <tab_layout bindchange="onTabChange"/>
+  <view class="coupon-tab-height" />
+  <view class="row coupon-tab-box" bindtap="gotoCouponCenter">
+    <image class="coupon-icon" mode="scaleToFill" src="/page_minor/assets/icon/coupon_ic.png" />
+    <text class="coupon-tab-more">领更多好券</text>
+    <text class="coupon-tab-center">领券中心</text>
+    <image class="coupon-right" src="/assets/icon/arrow_right.png" />
+  </view>
+
+  <view class="coupon-list">
+    <block wx:for="{{coupons}}" wx:key="index">
+      <view class="column item-box" bindtap="onUse">
+        <image class="item-bg-ic" mode="scaleToFill" src="/assets/img/coupon_bg.png" />
+        <image class="item-status-ic" src="/page_minor/assets/icon/coupon_get.png" />
+        <view class="row item-up">
+          <view class="column title-box">
+            <text class="item-title">{{item.title}}</text>
+            <text class="item-subtitle">{{item.remark}}</text>
+          </view>
+          <view class="row state-unit">
+            <text class="item-state">快到期</text>
+            <text class="item-unit">¥ <text class="item-price">{{item.balance}}</text></text>
+          </view>
+        </view>
+        <view class="row item-down">
+          <text class="item-date">{{'dateStr'}}</text>
+          <text class="item-qecode" bindtap="onQrcode">二维码</text>
+          <text class="item-use" bindtap="onUse">去使用</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <empty wx:if="{{coupons.length < 1}}" msg="" />
+  <text wx:if="{{hasMore}}">— 我也是有底线的哦 —</text>
+</view>

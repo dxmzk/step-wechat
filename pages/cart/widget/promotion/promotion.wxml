@@ -1,0 +1,36 @@
+<view class="v-promotion" catchtouchmove="true">
+  <wxs src="../../../../utils/wxs/goods.wxs" module="tools" />
+  <view class="v-flex" bindtap="onClose" />
+  <view class="v-content v-column" animation="{{animData}}">
+    <view class="v-row v-line" style="min-height: 220rpx;">
+      <image src="{{item.skuImgUrl}}" class="v-img" bindtap="onLookImg" />
+      <view class="v-column v-price">
+        <text class="v-goods-code">商品编号：{{item.skuCode}}</text>
+        <text>¥<text class="v-new-price">{{item.price}}</text><text wx:if="{{item.customerPrice}}" class="v-old-price">¥{{item.customerPrice}}</text></text>
+      </view>
+      <image class="v-close" bindtap="onClose" src="/assets/icon/close_ic.png" />
+    </view>
+    <view class="v-list">
+      <block wx:for="{{list}}" wx:key="item">
+        <view class="v-item v-line v-column" bindtap="onPressItem">
+          <view class="v-row">
+            <view class="v-status-type">{{tools.activityType(item.rewardType)}}</view>
+            <text class="v-title">{{item.activityName}}</text>
+          </view>
+          <view class="v-row v-sub-box">
+            <text wx:if="{{item.shareAmount <= 0}}" class="v-subtitle">{{item.activityCondition||''}}</text>
+            <text wx:if="{{item.shareAmount > 0}}" class="v-subtitle">已减<text class="v-money">{{item.shareAmount}}</text>元</text>
+            <text wx:if="{{item.shareAmount > 0 && item.addAmount > 0}}" class="v-subtitle">，再凑{{item.addAmount}}元，可减{{item.addShareAmount}}元</text>
+          </view>
+          <view class="v-row v-goto-box" bindtap="onAddItem" data-item="{{item}}">
+            <text class="v-goto">去凑单</text>
+            <image class="v-icon" src="/assets/icon/arrow_right.png" />
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="v-row v-actions">
+      <view class="v-ok" bindtap="onClose">确 定</view>
+    </view>
+  </view>
+</view>

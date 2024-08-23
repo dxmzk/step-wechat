@@ -1,0 +1,32 @@
+<view class="container">
+  <header title="选择门店" />
+
+  <!-- 内容栏 -->
+  <view class="row c-shop-box">
+    <view class="c-shop-tab-box">
+      <block wx:for="{{cityList}}" wx:key="index">
+        <view 
+          class="c-shop-tab-view {{cityCode == item.cityCode ? 'c-shop-tab-sel':''}}" 
+          bindtap="onChangeCity" 
+          data-name="{{item.cityName}}"
+          data-code="{{item.cityCode}}">
+          <text>{{item.keyStr}} {{item.cityName}}</text>
+        </view>
+      </block>
+    </view>
+    <!--  -->
+    <view class="c-shop-list">
+      <block wx:for="{{shopList}}" wx:key="item">
+        <view 
+          class="item-box" 
+          bindtap="onShopItem" 
+          data-code="{{item.shopCode}}"
+          data-name="{{item.shopName}}">
+            <text class="item-text"> {{item.shopName}}</text>
+            <image wx:if="{{shopCode == item.shopCode}}" class="item-icon" src="/assets/icon/dui_hao.png"/>
+        </view>
+      </block>
+    </view>
+    <empty wx:if="{{shopList.length < 1}}" icon="" msg="当前城市还没有店铺哦！" />
+  </view>
+</view>

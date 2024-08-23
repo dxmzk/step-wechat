@@ -1,0 +1,20 @@
+<view class="container address">
+  <header title="收货地址" />
+  <view class="flex column list">
+
+    <address_item list="{{addressList}}" bindclick="onItemClick" bindedit="onEditAddress"/>
+    <!-- 不可用 -->
+    <view wx:if="{{addressList2.length > 0}}" class="not-use-box">
+      <image class="alert-ic" src="/page_minor/assets/icon/alert_ic.png" />
+      <text>以下地址超出配送范围</text>
+    </view>
+
+    <address_item list="{{addressList2}}" use="{{mode}}" bindedit="onEditAddress"/>
+
+    <empty wx:if="{{addressList.length < 1 && addressList2.length < 1}}" icon="/assets/img/empty_list.png" msg="您暂无收货地址"/>
+  </view>
+  
+  <view class="row bang footer-action">
+    <view class="footer-btn" bindtap="onAddAddress">添加收货地址</view>
+  </view>
+</view>

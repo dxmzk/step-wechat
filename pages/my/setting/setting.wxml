@@ -1,0 +1,13 @@
+<!--  -->
+<view class="container">
+  <header title="设置" />
+
+  <view class="list">
+    <block wx:for="{{itemList}}" wx:key="index">
+      <view class="row ai-center item" bindtap="onItemClick">
+        <text class="flex item-name">{{item.name}}</text>
+        <image class="right-ic" src="/assets/icon/arrow_right.png"/>
+      </view>
+    </block>
+  </view>
+</view>

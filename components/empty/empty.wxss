@@ -1,0 +1,19 @@
+
+.v-empty {
+  width: auto;
+  margin-top: 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.v-empty-img {
+  width: 380rpx;
+  height: 380rpx;
+  border-radius: 8rpx;
+}
+.v-empty-text {
+  color: #676767;
+  font-size: 30rpx;
+  margin: 24rpx 0;
+}

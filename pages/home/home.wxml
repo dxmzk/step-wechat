@@ -1,0 +1,86 @@
+<import src="home.skeleton.wxml" />
+<template is="skeleton" wx:if="{{firstIn}}" />
+<view class="{{'container ' + (firstIn ? '':'home')}} ">
+  <home_header bindshop="onChangeShop" shopNameStr="{{shopName}}" />
+  <home_search bindsearch="onOpenSearch" cartNum="{{cartNum}}" />
+  <!-- banner -->
+  <swiper wx:if="{{bannerList.length > 0}}" class="swiper-box" indicator-dots="{{indicator}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{bannerList}}" wx:key="index">
+      <swiper-item class="swiper-item" bindtap="onClickBanner" data-item="{{item}}">
+        <image class="swiper-item" src="{{item.imageUrl}}" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 角标 -->
+  <view class="row home-tab1">
+    <block wx:for="{{mallSecurity}}" wx:key="index">
+      <view>
+        <image class="home-tab1-ic" src="{{item.imageUrl}}" />
+        <text class="home-tab1-str">{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 金刚位/菜单栏 -->
+  <view class="home-tab2">
+    <block wx:for="{{categories}}" wx:key="index">
+      <view class="column center home-tab2-item" bindtap="onMenuTab" data-item="{{item}}">
+        <image class="home-tab2-ic" src="{{item.logo}}" />
+        <text class="home-tab2-str">{{item.categoryName}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 暂停开发 -->
+  <view wx:if="{{1==0}}" class="home-tab3">
+    <view class="row ai-center home-tab3-top">
+      <text class="home-tab3-label">门店活动</text>
+      <text>查看全部</text>
+      <image class="home-tab3-right-ic" />
+    </view>
+    <view class="home-tab3-box">
+      <block wx:for="1234" wx:key="item">
+        <view class="home-tab3-item">
+          <view class="row ai-center">
+            <text class="home-tab3-item-name">测试测试测试</text>
+            <text class="home-tab3-item-tag">满三减一</text>
+          </view>
+          <text class="home-tab3-date">8/21-8/30</text>
+          <view>
+            <image class="home-tab3-img" />
+            <image class="home-tab3-img" style="margin-left: 38rpx;" />
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- brandItem -->
+  <view wx:if="{{brandItem.content}}" class="row home-tab4" bindtap="onClickTab4">
+    <view class="column home-tab4-info">
+      <text class="home-tab4-title">品牌推荐</text>
+      <text class="home-tab4-label">精选安居大牌</text>
+      <view class="row center home-tab4-go">
+        <text>GO</text>
+        <image class="home-tab4-go-ic" src="/assets/icon/arrow_right_w.png" />
+      </view>
+    </view>
+    <block wx:for="{{brandItem.content}}" wx:key="index">
+      <view class="column home-tab4-list">
+        <image class="home-tab4-img" src="{{item.imageUrl}}" />
+        <text class="home-tab4-name">{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 横项滑动分类 -->
+  <view class="scroll-box" style="top: {{topHeight}}px">
+    <block wx:for="{{tabList}}" wx:key="index">
+      <view class="tab-box" bindtap="onGoodsTab" data-idx="{{item.categoryId}}" data-tag="{{index}}">
+        <text class="{{'tab-item' + (item.categoryId == categoryId ?'':'2')}}">{{item.categoryName}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 内容列表 -->
+  <goods_list items="{{goodsList}}" bindclick="onGoodsClick" />
+  <empty wx:if="{{!firstIn && goodsList.length < 1}}" />
+</view>

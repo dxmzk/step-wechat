@@ -1,0 +1,61 @@
+/* sort */
+.sort {
+  flex: 1;
+  background-color: white;
+}
+
+.sort-box {
+  flex: 1;
+  margin-top: 16rpx;
+}
+.sort-tab-box {
+  width: 186rpx;
+  min-width: 186rpx;
+  max-height: 100%;
+  overflow-y: scroll;
+  border-right: solid 1px #e0e0e0;
+}
+.sort-tab-view {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #636363;
+  font-size: 28rpx;
+  background-color: #f3f3f3;
+}
+.sort-tab-sel {
+  color: #f56105;
+  font-size: 30rpx;
+  font-weight: 600;
+  background-color: white;
+}
+
+/* 列表 */
+.sort-grid {
+  flex: 1;
+  max-height: 100%;
+  overflow-y: scroll;
+  display: grid;
+  /* column-gap: 20rpx; */
+  row-gap: 28rpx;
+  grid-template-rows: repeat(5, 200rpx);
+  grid-template-columns: repeat(3, 1fr);
+}
+.item-box {
+  position: relative;
+}
+.item-img {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 12rpx;
+  border-radius: 50%;
+}
+
+.item-text {
+  color: #232323;
+  font-size: 28rpx;
+  margin-top: 16rpx;
+  line-height: 36rpx;
+  /* text-indent: 24rpx; */
+  /* overflow: hidden; */
+}

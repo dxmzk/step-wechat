@@ -1,0 +1,378 @@
+@import "./cart.skeleton.wxss";
+.cart {
+}
+.top-address-box {
+  height: 88rpx;
+  padding-left: 32rpx;
+  margin-bottom: 16rpx;
+  background-color: white;
+}
+.s-line {
+  width: 1px;
+  height: 56rpx;
+  background-color: #dedede;
+}
+.address-ic {
+  width: 32rpx;
+  height: 32rpx;
+}
+.cart-address {
+  color: #323232;
+  font-size: 28rpx;
+  line-height: 56rpx;
+  padding-left: 12rpx;
+  min-width: 96rpx;
+}
+.cart-edit {
+  min-width: 120rpx;
+  color: #323232;
+  font-size: 28rpx;
+  text-align: center;
+}
+.column-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+.cart-list {
+  display: flex;
+  flex-direction: column;
+}
+.shop-item {
+  margin-bottom: 16rpx;
+  background-color: white;
+}
+.shop-size {
+  margin-left: 32rpx;
+  line-height: 80rpx;
+}
+.shop-title {
+  color: #232323;
+  font-size: 34rpx;
+  font-weight: 500;
+  margin-left: 20rpx;
+  font-family: PingFangSC-Medium;
+}
+
+.shop-alert {
+  color: #ff4b33;
+  font-size: 24rpx;
+  margin: 0 32rpx;
+}
+
+.goods-item {
+  /* opacity: 0.6; */
+}
+
+.goods-top-size {
+  padding-left: 32rpx;
+  min-height: 64rpx;
+  border-bottom: solid 1px #f5f5f5;
+}
+
+.sub-box {
+  color: white;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 32rpx;
+  background-color: #fe7100;
+  height: 32rpx;
+  width: 52rpx;
+  min-width: 52rpx;
+  border-radius: 4rpx;
+  margin-right: 8rpx;
+  margin-top: 2rpx;
+}
+
+.sub-text {
+  color: #323232;
+  font-size: 24rpx;
+  line-height: 34rpx;
+}
+.sub-text2 {
+  color: #323232;
+}
+
+.add-on {
+  color: #969696;
+  margin-left: 16rpx;
+  min-width: 80rpx;
+  text-align: right;
+}
+
+.right-ic {
+  width: 26rpx;
+  height: 26rpx;
+  margin-top: 4rpx;
+  margin-left: 4rpx;
+  margin-right: 32rpx;
+}
+.up-ic {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 6rpx;
+}
+
+.cart-scroll {
+  /* overflow-x: scroll; */
+  position: relative;
+  padding-left: 32rpx;
+  border-bottom: solid 1px #f5f5f5;
+}
+.scroll {
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.goods-delete {
+  width: 140rpx;
+  height: 100%;
+  min-width: 140rpx;
+  min-height: 250rpx;
+  padding-bottom: -24rpx;
+  background-color: #ff4b33;
+
+  color: white;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 240rpx;
+}
+
+.check-img {
+  width: 36rpx;
+  height: 36rpx;
+  min-width: 36rpx;
+}
+.goods-img-box {
+  min-width: 192rpx;
+  width: 192rpx;
+  height: 192rpx;
+  margin: 24rpx 24rpx;
+  position: relative;
+}
+.goods-img {
+  min-width: 192rpx;
+  width: 192rpx;
+  height: 192rpx;
+  border-radius: 8rpx;
+  background-color: #efefef;
+}
+.img-mark {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+
+  color: white;
+  font-size: 24rpx;
+  font-weight: 500;
+  font-family: PingFangSC-Medium;
+}
+.goods-content {
+  min-width: 450rpx;
+  max-width: 450rpx;
+  min-height: 192rpx;
+  margin: 24rpx 0;
+}
+.goods-title {
+  color: #232323;
+  font-size: 28rpx;
+  font-weight: 500;
+  line-height: 40rpx;
+  margin-bottom: 8rpx;
+  font-family: PingFangSC-Medium;
+  max-width: 400rpx;
+}
+
+.goods-type {
+  color: #676767;
+  font-size: 22rpx;
+  text-align: center;
+  height: 36rpx;
+  line-height: 36rpx;
+  padding: 0 8rpx;
+  margin-right: 8rpx;
+  margin-bottom: 10rpx;
+  border-radius: 4rpx;
+  background-color: #f3f3f3;
+}
+.type-str {
+  max-width: 200rpx;
+}
+.type-ic {
+  width: 18rpx;
+  height: 18rpx;
+  margin-left: 4rpx;
+}
+.coupon-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 88rpx;
+  padding-right: 32rpx;
+  overflow: hidden;
+}
+
+.coupon-tag {
+  color: #fe7100;
+  font-size: 22rpx;
+  line-height: 36rpx;
+  height: 36rpx;
+  border-radius: 4rpx;
+  margin-right: 8rpx;
+  margin-bottom: 8rpx;
+  padding: 0 6rpx;
+  border: solid 1px #fed4b2;
+}
+
+.count-box {
+  margin-right: 32rpx;
+}
+
+.count-edit-ic {
+  width: 20rpx;
+  height: 20rpx;
+}
+.count-edit {
+  width: 48rpx;
+  height: 48rpx;
+  border: solid 1px #dedede;
+}
+
+.goods-count {
+  width: 64rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  font-size: 24rpx;
+  text-align: center;
+  border-top: solid 1px #dedede;
+  border-bottom: solid 1px #dedede;
+}
+
+.goods-price {
+  color: #f56105;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.price-box {
+  margin-top: 22rpx;
+}
+
+.look-other {
+  color: #fe7100;
+  font-size: 28rpx;
+  width: 190rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 8rpx;
+  padding: 0 8rpx;
+  margin-right: 32rpx;
+  border: solid 1px #ffb880;
+}
+
+.empty-box {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.empty-text {
+  font-size: 32rpx;
+  color: #666666;
+  margin: 24rpx 0;
+}
+.goto-btn {
+  background-color: white;
+  border: solid 1px #ffb880;
+  border-radius: 8rpx;
+  margin: 0 16rpx;
+  height: 80rpx;
+  width: 300rpx;
+  line-height: 80rpx;
+  text-align: center;
+
+  font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  color: #fe7100;
+  font-weight: 500;
+}
+
+.recommend-box {
+  height: 88rpx;
+  line-height: 88rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 36rpx;
+  color: #333333;
+  text-align: center;
+  font-weight: 500;
+  margin: 24rpx 0 0 0;
+  background: linear-gradient(180deg, #f5f5f5, #ffffff);
+}
+
+.cart-footer {
+  bottom: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  background-color: white;
+  border-top: solid 1px #e3e3e3;
+}
+.cost-box {
+  margin: 0 32rpx;
+  align-items: flex-end;
+}
+.cost-line {
+  font-size: 22rpx;
+  color: #f56105;
+  line-height: 34rpx;
+  /* text-decoration: line-through; */
+}
+.check-all-str {
+  margin-left: 12rpx;
+}
+.total-cost {
+  font-family: PingFangSC-Medium;
+  font-size: 36rpx;
+  color: #f56105;
+  font-weight: 500;
+  line-height: 40rpx;
+  display: flex;
+  align-items: baseline;
+}
+.coupon-info {
+  margin-left: 16rpx;
+}
+.go-pay {
+  width: 180rpx;
+  height: 80rpx;
+  margin-right: 32rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 12rpx;
+  background-color: #fe7100;
+
+  color: white;
+  font-size: 32rpx;
+  font-weight: 500;
+  font-family: PingFangSC-Medium;
+}
+.check-all {
+  color: #232323;
+  font-size: 28rpx;
+  margin-left: 32rpx;
+}

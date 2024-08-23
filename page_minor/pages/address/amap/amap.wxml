@@ -1,0 +1,30 @@
+<view class="container amap">
+  <header title="地址选择" />
+  <view class="row search-box">
+    <view bindtap="onChangeCity">
+      <text>{{cityName}}</text>
+      <image class="icon" src="/assets/icon/arrow_down.png" />
+    </view>
+    
+    <view class="flex row input" bindtap="onSearch">
+      <image class="icon" src="/assets/icon/search.png" />
+      <input class="flex" disabled="{{disabled}}" placeholder="请输入你的收货地址" />
+    </view>
+  </view>
+  <view class="amap-box">
+    <map id="amap_view" class="amap-view" style="{{mapStyle}}" bindtap="onTapMap" latitude="{{latitude}}" longitude="{{longitude}}" />
+    <image class="location-ic" src="/assets/icon/location_ic.png" bindtap="getCurLocation"/>
+  </view>
+  <view wx:if="{{adsList.length > 0}}" class="ads-list column">
+    <block wx:for="{{adsList}}" wx:key="index">
+      <view class="row item" bindtap="onItemClick" data-item="{{item}}">
+        <image class="address-ic" src="/assets/icon/check_{{adsId == index ? 'on':'no'}}.png"/>
+        <view class="flex column">
+          <text wx:if="{{adsId == index}}" class="address-name org-color">{{item.name}}</text>
+          <text wx:else class="address-name">{{item.name}}</text>
+          <text class="address-info">{{item.cityname}}{{item.adname}}{{item.address}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+/* pages/goods/preview/preview.wxss */
+.p-page {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+.swiper-item {
+    width: 100%;
+    height: 100%;
+}
+.swiper-index {
+    z-index: 9;
+    top: 156rpx;
+    position: absolute;
+    color: white;
+    font-size: 32rpx;
+    line-height: 32rpx;
+    padding: 8rpx 12rpx;
+    border-radius: 8rpx;
+    background-color: rgba(0, 0, 0, 0.3);
+}

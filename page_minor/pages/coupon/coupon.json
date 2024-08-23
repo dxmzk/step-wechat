@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "tab_layout": "/page_minor/components/tab_layout/tab"
+  }
+}

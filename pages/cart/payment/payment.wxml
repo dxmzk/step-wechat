@@ -1,0 +1,79 @@
+<view class="container pay">
+  <header title="订单支付" />
+  <view wx:if="{{!adsCanUse}}" class="row ai-center address-not-use">
+    <image class="not-use-icon" src="/assets/icon/info.png"/>
+    <text class="str-not-use">该地址不在配送范围内</text>
+  </view>
+  <!-- 地址/送货时间 -->
+  <view class="item-box" style="margin-top: 0;">
+    <view class="column jc-center address" bindtap="onChooseAddress">
+      <text class="address-title {{address.id != 0 ? '':'opacity'}}">{{address.address}}</text>
+      <text wx:if="{{address.id != 0}}" class="str-label">{{address.userName}} {{address.phone}}</text>
+      <image class="right-ic right-box" src="/assets/icon/arrow_right.png" />
+    </view>
+    <view class="column jc-center address send-date">
+      <!-- <text class="address-title {{dateInfo ? '':'opacity'}}">请选择时间</text> -->
+      <text class="str-label">送货时间</text>
+      <view class="row ai-center address-title date-value">
+        <text wx:if="{{dateInfo.urgent}}" class="date-urgent">加急</text>
+        <text>{{dateInfo.date || '请选择时间'}}</text>
+      </view>
+      <image class="right-ic right-box" src="/assets/icon/arrow_right.png" />
+    </view>
+  </view>
+  <image class="line-ic" src="/assets/img/line.png" />
+
+  <view class="item-box">
+    <view class="row item">
+      <text>备注</text>
+      <view class="flex row input-memo-box">
+        <input class="input-memo" maxlength="60" placeholder="选填" />
+      </view>
+    </view>
+  </view>
+  <!-- 商品 -->
+  <view class="item-box">
+    <goods_item goods="{{goodsList}}"/>
+    <view class="row logistics-num">
+      <text class="flex ">配送：3笔物流订单</text>
+      <image class="right-ic" src="/assets/icon/arrow_right.png" />
+    </view>
+  </view>
+  <!-- 金额 -->
+  <view class="item-box">
+    <cost_cell items="{{costList}}"/>
+    <view class="row item">
+      <text class="str-tag">积</text>
+      <text class="flex">积分</text>
+      <text class="str-16 str-org str-med"><text class="unit">-¥</text>10</text>
+    </view>
+    <view class="line" />
+    <view class="row item">
+      <text class="flex">优惠规则</text>
+      <text>
+        <text>已优惠</text>
+        <text class="str-money str-org"><text class="unit">-¥</text>10</text>
+      </text>
+      <text style="margin-left: 60rpx;">
+        <text>合计</text>
+        <text class="str-money"><text class="unit">-¥</text>10</text>
+      </text>
+    </view>
+  </view>
+  <!-- 失效商品 -->
+  <view class="item-box" style="padding-left: 0;">
+    <view class="row bad-goods-label">
+      <text class="flex">失效商品</text>
+      <text class="str-org">清空失效商品</text>
+    </view>
+    <goods_cell goods="{{goodsList}}"/>
+  </view>
+
+  <view class="row bang footer-box">
+    <view class="row flex baseline">
+      <text class="total-cost"><text class="unit-l">¥</text>1312</text>
+      <text class="total-amount decoration">¥1312</text>
+    </view>
+    <text class="pay-btn">提交订单</text>
+  </view>
+</view>

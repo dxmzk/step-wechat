@@ -1,0 +1,42 @@
+<view class="container login">
+  <header title="账号登录" />
+
+  <view class="row center logo-box">
+    <image class="logo" src="/assets/icon/logo.png" />
+  </view>
+
+  <view wx:if="{{wxLogin}}" class="column login-box">
+    <button class="login-btn" style="width: 100%;margin-top: 180rpx;" open-type="getPhoneNumber" bindgetphonenumber="getWXPhoneNumber">快捷登录</button>
+  </view>
+
+  <view wx:if="{{!wxLogin}}" class="column login-box">
+    <view class="row input-box">
+      <input class="flex input-str" maxlength="11" type="number" placeholder="请输入手机号" bindinput="onInputPhone" />
+    </view>
+
+    <text wx:if="{{authImg}}" class="auth-str">{{question}}</text>
+    <view wx:if="{{authImg}}" class="row auth-code">
+      <image id="auth_image" class="auth-img" src="{{authImg}}" bindtouchstart="onTouchStart" />
+      <text class="auth-reset" bindtap="getAuthImg">刷新</text>
+
+      <block wx:for="{{authPoint}}" wx:key="index">
+        <view class="point-ic" style="{{'left: ' + item.x + 'px; top:' + item.y + 'px'}}" />
+      </block>
+    </view>
+
+    <view wx:if="{{authImg}}" class="row input-box">
+      <input class="flex input-str" maxlength="6" type="number" placeholder="请输入验证码" bindinput="onInputCode" />
+      <text wx:if="{{!codeTimer}}" class="code-box" bindtap="getAuthCode">{{codeAlertStr}}</text>
+      <text wx:if="{{codeTimer}}" class="code-box code-timer">{{codeAlertStr}}</text>
+    </view>
+    <view class="login-btn login-btn2" bindtap="onLogin">登 录</view>
+  </view>
+
+  <text class="hint-str">未注册用户，系统自动为您注册</text>
+
+  <view class="flex" />
+  <view class="row hint-str footer">
+    <text>点击确定，即表示您已阅读并同意</text>
+    <text class="alert-str" bindtap="gotoGuide">百安居会员协议</text>
+  </view>
+</view>

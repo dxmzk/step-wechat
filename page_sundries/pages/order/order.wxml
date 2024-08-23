@@ -1,0 +1,55 @@
+<view class="container">
+  <header title="我的订单" />
+  <order_tab tabIndex="{{tabIndex}}"/>
+  <view class="column list">
+    <block wx:for="{{orderList}}" wx:key="index" wx:for-item="goods" wx:for-index="idx">
+      <view class="column item">
+        <view class="row ai-center" bindtap="onOpenShop">
+          <image class="shop-logo" src="/page_sundries/assets/icon/shop_ic.png"/>
+          <text class="shop-name">{{goods.title}}</text>
+          <image class="right-ic" src="/assets/icon/arrow_right.png"/>
+          <text class="flex order-status">{{goods.status}}</text>
+        </view>
+        <!-- 图片数量大于 1 -->
+        <view wx:if="{{goods.img.length > 1}}" class="row goods-img-box">
+          <view class="row img-layout">
+            <block wx:for="{{goods.img}}" wx:key="index">
+              <image class="goods-img" />
+            </block>
+          </view>
+          
+          <text class="goods-num-box">共{{goods.img.length}}件</text>
+        </view>
+        <!-- 图片数量不大于 1 -->
+        <view wx:else class="row goods-info">
+          <image class="goods-img" style="margin-right: 16rpx;" />
+          <view class="column">
+            <text class="goods-name">{{goods.name}}</text>
+            <text class="goods-type">{{goods.type}}</text>
+            <view>
+              <text class="goods-tag">{{goods.tag}}</text>
+            </view>
+          </view>
+          <view class="column price-num">
+            <text>
+              ¥<text class="goods-price">{{goods.price}}</text>
+            </text>
+            <text class="goods-num">x{{goods.num}}</text>
+          </view>
+        </view>
+
+        <view class="row ai-center item-footer">
+          <text class="action-more">更多</text>
+          <view class="flex" />
+          <text class="action-btn">取消订单</text>
+          <text class="action-btn action-btn2">立即支付</text>
+        </view>
+        <view wx:if="{{false}}" class="column pop-view">
+          <block wx:for="1212" wx:key="item">
+            <text class="pop-item">{{e}}</text>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

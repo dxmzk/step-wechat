@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "address_item": "/page_minor/pages/address/widget/address_item"
+  }
+}

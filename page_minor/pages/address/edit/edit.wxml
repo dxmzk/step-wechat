@@ -1,0 +1,40 @@
+<view class="container ads-edit">
+  <header title="编辑地址" />
+  <view class="item">
+    <view class="row item-box">
+      <text class="item-label">地区</text>
+      <view class="flex column" bindtap="onChooseMap">
+        <input class="item-value" disabled="{{true}}" value="{{params.shortAddress}}" placeholder="请选择地址" />
+        <text class="item-subtitle ellip">{{params.shortRemarkAddress}}</text>
+      </view>
+      <image class="right-ic" src="/assets/icon/arrow_right.png" />
+    </view>
+
+    <view class="row item-box">
+      <text class="item-label">门牌号</text>
+      <input class="item-value" maxlength="{{50}}" bindinput="inputDoors" value="{{params.remarkAddress}}" placeholder="请输入详细地址，街道，门牌号"/>
+    </view>
+
+    <view class="row item-box">
+      <text class="item-label flex">默认地址</text>
+      <switch class="item-switch" bindchange="onChangeDef" color="#F56105" checked="{{params.isDefault == 1}}" />
+    </view>
+  </view>
+  <view class="item">
+    <view class="row item-box">
+      <text class="item-label">收货人</text>
+      <input class="item-value" maxlength="{{32}}" value="{{params.receiverName}}" bindinput="inputName" placeholder="请输入收货人姓名"/>
+      <radio-group bindchange="onChangeSex">
+        <radio class="item-switch" checked="{{params.sex == 0}}" value="0" color="#F56105">先生</radio>
+        <radio class="item-switch" checked="{{params.sex == 1}}" value="1" color="#F56105">女士</radio>
+      </radio-group>
+    </view>
+
+    <view class="row item-box">
+      <text class="item-label">手机号</text>
+      <input class="item-value" maxlength="{{11}}" value="{{params.receiverMobile}}" bindinput="inputPhone" placeholder="请输入收货人手机号"/>
+    </view>
+  </view>
+  <view class="add-ads" bindtap="onSave">保 存</view>
+  <view wx:if="{{params.id > 0}}" class="add-ads add-ads2" bindtap="onDelete">删 除</view>
+</view>

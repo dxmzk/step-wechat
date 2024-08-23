@@ -1,0 +1,124 @@
+.v-filter-pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  
+  display: flex;
+  justify-content: flex-end;
+}
+.v-filter-pop .v-mark {
+  flex: 1;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.v-filter-pop .v-filter-box {
+  width: 600rpx;
+  height: 100vh;
+  background-color: white;
+}
+.v-filter-pop .v-flex {
+  flex: 1;
+  overflow-y: scroll;
+}
+.v-filter-pop .v-row {
+  display: flex;
+}
+.v-filter-pop .v-column {
+  display: flex;
+  flex-direction: column;
+}
+.v-filter-pop .v-top-box {
+  width: 1px;
+  height: 88px;
+  min-height: 88px;
+}
+.v-filter-pop .v-box {
+  color: #979797;
+  font-size: 24rpx;
+  height: 96rpx;
+  min-height: 96rpx;
+  display: flex;
+  margin: 0 32rpx;
+  align-items: center;
+}
+.v-filter-pop .v-box-name {
+  font-family: PingFangSC-Medium;
+  font-size: 36rpx;
+  color: #323232;
+  flex: 1;
+}
+.v-filter-pop .v-down-ic {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 6rpx;
+}
+.v-filter-pop .v-filter-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 32rpx;
+}
+.v-filter-pop .v-filter-grid-name {
+  color: #323232;
+  font-size: 28rpx;
+  padding: 6rpx 12rpx;
+  margin-bottom: 14rpx;
+  margin-right: 10rpx;
+  border-radius: 8rpx;
+  background-color: #ededed;
+}
+.v-filter-pop .v-filter-name-on {
+  color: #FE7100;
+  font-size: 28rpx;
+  font-weight: 500;
+  font-family: PingFangSC-Medium;
+  padding: 6rpx 12rpx;
+  margin-bottom: 14rpx;
+  margin-right: 10rpx;
+  border-radius: 8rpx;
+  background-color: #FEF0E5;
+}
+.v-filter-pop .v-footer {
+  margin-bottom: 44px;
+}
+.v-filter-pop .v-btn-str {
+  font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  color: #FE7100;
+  text-align: center;
+  font-weight: 500;
+  line-height: 80rpx;
+}
+.v-filter-pop .v-footer-btn {
+  width: 260rpx;
+  height: 80rpx;
+  min-height: 80rpx;
+  border-radius: 8rpx;
+  border: 1px solid #FFB880;
+}
+.v-filter-pop .v--btn2 {
+  color: white;
+  margin-left: 24rpx;
+  background-color: #FE7100;
+}
+.v-filter-pop .v-goods-num {
+  font-size: 24rpx;
+}
+.v-filter-pop .v-line {
+  width: 12px;
+  height: 1px;
+  background-color: #636363;
+}
+.v-filter-pop .v-price-box {
+  margin-bottom: 32rpx;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.v-filter-pop .v-price-view {
+  width: 220rpx;
+  height: 64rpx;
+  text-align: center;
+  background-color: #F5F5F5;
+  border-radius: 8rpx;
+}

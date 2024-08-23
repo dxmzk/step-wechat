@@ -1,0 +1,50 @@
+.v-address-item {
+  display: flex;
+  flex-direction: column;
+}
+.v-address-item .v-row {
+  display: flex;
+  flex-direction: row;
+}
+.v-address-item .v-flex {
+flex: 1;
+}
+.v-address-item .v-column {
+  display: flex;
+  flex-direction: column;
+}
+.v-address-item .v-item-box {
+  min-height: 164rpx;
+  padding: 16rpx 32rpx;
+  align-items: center;
+  background-color: white;
+}
+.v-address-item .v-item-def-str {
+  background-color: #fef0e5;
+  border-radius: 6rpx;
+  margin-right: 16rpx;
+  color: #f56105;
+  font-size: 20rpx;
+  padding: 3rpx 8rpx;
+  line-height: 22rpx;
+}
+.v-address-item .v-def-str2 {
+  background-color: #e5faef;
+  color: #05c25d;
+}
+.v-address-item .v-user-str {
+  color: #232323;
+  font-size: 32rpx;
+  font-weight: 500;
+  line-height: 50rpx;
+  font-family: PingFangSC-Medium;
+}
+.v-address-item .v-phone {
+  color: #979797;
+  font-size: 28rpx;
+  margin-left: 16rpx;
+}
+.v-address-item .v-edit-ic {
+  width: 48rpx;
+  height: 48rpx;
+}

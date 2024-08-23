@@ -1,0 +1,6 @@
+<view class="v-content-input">
+  <view class="v-input-box">
+    <textarea class="v-input" placeholder="{{placeholder}}" bindinput="onInput"/>
+  </view>
+	<text class="v-count">{{count}}/{{max_count}}</text>
+</view>

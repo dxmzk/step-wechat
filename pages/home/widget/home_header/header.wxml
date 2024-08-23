@@ -1,0 +1,16 @@
+<view class="v-home-header">
+	<view class="v-home-header_inner2" style="padding-top: {{statusBarHeight}}px;" />
+	<view class="v-home-header_inner" 
+	style="padding-top: {{statusBarHeight}}px;">
+
+		<view class='v-home-header_left' bindtap="onChangeShop">
+			<text class="v-shop-header-name">{{shopName||'   '}}</text>
+			<image class="v-home-header_left_ic" src="/assets/icon/arrow_down_w.png"/>
+		</view>
+
+		<view class='v-home-header_center'>
+			<text>{{title}}</text>
+		</view>
+		<view class='v-home-header_right' />
+	</view>
+</view>

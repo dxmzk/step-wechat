@@ -1,0 +1,232 @@
+@import "./home.skeleton.wxss";
+.home {
+  flex: 1;
+  background-color: white;
+  --top: 130px;
+}
+
+.swiper-box {
+  padding: 20rpx 24rpx 2rpx 24rpx;
+  height: 180rpx;
+  background: linear-gradient(180deg, #fe7100 0%, #f8f7f6 100%);
+}
+.swiper-item {
+  width: 100%;
+  height: 180rpx;
+  border-radius: 8rpx;
+}
+
+.home-tab1 {
+  height: 34rpx;
+  margin-top: 20rpx;
+  margin-bottom: 32rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+.home-tab1-ic {
+  width: 24rpx;
+  height: 24rpx;
+}
+.home-tab1-str {
+  line-height: 34rpx;
+  font-size: 24rpx;
+  color: #865c22;
+  margin-left: 8rpx;
+}
+
+.home-tab2 {
+  margin: 0 16rpx;
+  display: grid;
+  grid-row-gap: 24rpx;
+  grid-template-columns: repeat(5, 1fr);
+}
+.home-tab2-item {
+  /* width: 140rpx; */
+  height: 140rpx;
+}
+.home-tab2-ic {
+  width: 96rpx;
+  height: 96rpx;
+}
+.home-tab2-str {
+  font-size: 26rpx;
+  color: #323232;
+  margin-left: 8rpx;
+}
+
+.home-tab3 {
+  margin: 32rpx 32rpx 20rpx 32rpx;
+  background: linear-gradient(0deg, #ff203d 0%, #f93b13 82%);
+  border-radius: 16rpx;
+}
+.home-tab3-top {
+  color: white;
+  height: 90rpx;
+  padding: 0 24rpx;
+
+  font-size: 24rpx;
+}
+.home-tab3-label {
+  flex: 1;
+  font-size: 36rpx;
+  font-weight: 600;
+  font-family: PingFangSC-Medium;
+}
+.home-tab3-right-ic {
+  width: 26rpx;
+  height: 26rpx;
+  margin-left: 12rpx;
+}
+.home-tab3-box {
+  background-color: #f3f3f3;
+  border-radius: 8rpx;
+  margin: 0 8rpx 8rpx 8rpx;
+  overflow: hidden;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.home-tab3-item {
+  max-width: 278rpx;
+  /* height: 236rpx; */
+  padding: 20rpx 28rpx 16rpx 28rpx;
+  background-color: white;
+}
+.home-tab3-img {
+  width: 120rpx;
+  height: 120rpx;
+}
+.home-tab3-item-name {
+  font-family: PingFangSC-Medium;
+  font-size: 32rpx;
+  color: #232323;
+  font-weight: 500;
+  max-height: 36rpx;
+  flex: 1;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+.home-tab3-item-tag {
+  font-family: PingFangSC-Medium;
+  font-size: 20rpx;
+  color: #ffffff;
+  line-height: 24rpx;
+  font-weight: 500;
+  text-align: center;
+
+  width: 140rpx;
+  height: 32rpx;
+  min-width: 140rpx;
+  line-height: 32rpx;
+  background-image: linear-gradient(
+    90deg,
+    #ff5f35 0%,
+    #cc16f2 0%,
+    #8234fa 100%
+  );
+  border-radius: 8px 8px 8px 0;
+}
+.home-tab3-date {
+  color: #676767;
+  font-size: 22rpx;
+  margin-top: 4rpx;
+  margin-bottom: 8rpx;
+}
+
+.home-tab4 {
+  margin: 16rpx 32rpx 20rpx 32rpx;
+  border-radius: 16rpx;
+  background: linear-gradient(180deg, #f4d6b6 0%, #fdf7f2 71%);
+}
+.home-tab4-info {
+  padding: 24rpx 0 24rpx 20rpx;
+}
+
+.home-tab4-title {
+  font-size: 34rpx;
+  color: #b05431;
+  font-weight: bold;
+}
+.home-tab4-label {
+  font-size: 24rpx;
+  color: #b94500;
+  margin-top: 12rpx;
+}
+.home-tab4-go {
+  background-color: #f56105;
+  border-radius: 22rpx;
+  margin-top: 28rpx;
+  width: 80rpx;
+  height: 44rpx;
+  color: white;
+  font-size: 24rpx;
+  line-height: 44rpx;
+}
+.home-tab4-go-ic {
+  width: 12rpx;
+  height: 15rpx;
+  margin-left: 4rpx;
+  margin-bottom: 4rpx;
+}
+.home-tab4-list {
+  padding: 24rpx 0 24rpx 18rpx;
+}
+.home-tab4-img {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 8rpx;
+  background-color: #ffffff;
+}
+.home-tab4-name {
+  color: #b94500;
+  font-size: 24rpx;
+  text-align: center;
+  max-width: 120rpx;
+  margin-top: 8rpx;
+}
+
+/* 话题 */
+.scroll-box {
+  margin: 0 32rpx 20rpx 32rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  position: sticky;
+  position: -webkit-sticky;
+  top: var(--top);
+  z-index: 1;
+  background-color: white;
+}
+.scroll-box::-webkit-scrollbar {
+  display: none;
+}
+.tab-box {
+  padding: 0 24rpx;
+  display: flex;
+  margin-right: 8rpx;
+}
+
+.tab-item {
+  height: 80rpx;
+  color: #232323;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+  white-space: nowrap;
+  font-family: PingFangSC-Medium;
+}
+.tab-item2 {
+  height: 80rpx;
+  color: #686868;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  white-space: nowrap;
+}
+
+/* 列表 */
+.list {
+}

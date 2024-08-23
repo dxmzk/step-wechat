@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "goods_item": "/components/order/goods_item/goods",
+    "goods_cell": "/components/order/goods_cell/cell",
+    "cost_cell": "/pages/cart/widget/cost_cell/call"
+  }
+}

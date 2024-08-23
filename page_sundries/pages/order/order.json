@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "order_tab": "../../components/order_tab/tab"
+  }
+}

@@ -1,0 +1,11 @@
+<view class="container bang city">
+  <header title="选择城市" />
+  <block wx:for="{{citys}}" wx:key="e" wx:for-item="e" wx:for-index="i">
+    <view>
+      <view class="p-text">{{e.key}}</view>
+      <block wx:for="{{e.city}}" wx:key="item">
+        <view class="p-text p-city-item" bindtap="onTapItem" data-item="{{item}}">{{item.cityName}}</view>
+      </block>
+    </view>
+  </block>
+</view>

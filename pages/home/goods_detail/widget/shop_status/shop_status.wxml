@@ -1,0 +1,36 @@
+<!-- 门店在售状态弹窗 -->
+<wxs src="/utils/tools.wxs" module="tools"/>
+<view class="v-shop-status" catchtouchmove="true">
+    <view class="v-flex" bindtap="onClose" />
+    <view class="v-content v-column" animation="{{animData}}">
+        <view class="v-row v-line" style="min-height: 220rpx;">
+            <image src="{{item.skuImgUrl}}" class="v-img" bindtap="onLookImg" />
+            <view class="v-column v-price">
+                <text>¥<text class="v-new-price">{{item.price}}</text><text wx:if="{{item.customerPrice}}" class="v-old-price">¥{{item.customerPrice}}</text></text>
+                <text class="v-goods-code">商品编号：{{item.skuCode}}</text>
+            </view>
+            <image class="v-close" bindtap="onClose" src="/assets/popClose.png" />
+        </view>
+        <view class="v-status-box v-row">
+            <text class="v-status-title">门店在售状态</text>
+            <view bindtap="onChangeCity">
+                <text>配送至：{{address.cityName}}</text>
+                <image class="v-icon" src="/assets/arrow_down.png"/>
+            </view>
+        </view>
+        <view class="v-list" wx:if="{{list.length > 0}}">
+            <block wx:for="{{list}}" wx:key="item">
+                <view class="v-row v-item v-line">
+                    <text class="v-status-type {{item.skuState == 1 ? 'v-status-type2':''}}">{{item.skuStateStr}}</text>
+                    <text class="v-name">{{item.shopName}}</text>
+                    <text class="v-distance">{{tools.fmtDistance(item.distance)}}</text>
+                </view>
+            </block>
+        </view>
+        <view class="v-empty" wx:if="{{list.length < 1}}">{{(loading && list.length < 1) ? '抱歉，当前城市未查询到门店！':''}}</view>
+        <view class="v-row v-actions">
+            <view class="v-ok v-cancel" bindtap="onContactShop">联系客服</view>
+            <!-- <view class="v-ok" bindtap="onAddShopWechat">添加门店顾问</view> -->
+        </view>
+    </view>
+</view>

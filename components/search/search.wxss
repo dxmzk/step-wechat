@@ -1,0 +1,50 @@
+.v-app-search {
+  z-index: 1;
+  width: 100%;
+  height: 88rpx;
+  min-height: 88rpx;
+  max-height: 88rpx;
+  background-color: white;
+}
+.v-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.v-search-box {
+  flex: 1;
+  height: 72rpx;
+  margin-left: 32rpx;
+  padding: 0 8rpx 0 18rpx;
+  border-radius: 8rpx;
+  background-color: #efefef;
+}
+.v-search-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 24rpx;
+}
+
+.v-search-text {
+  flex: 1;
+  /* text-align: center; */
+  color: #676767;
+  font-size: 28rpx;
+}
+.v-search-btn {
+  color: white;
+  font-size: 28rpx;
+  width: 112rpx;
+  min-width: 112rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  border-radius: 28rpx;
+  background-color: #FE7100;
+}
+.v-search-scan {
+  width: 46rpx;
+  height: 40rpx;
+  margin-left: 24rpx;
+  margin-right: 32rpx;
+}

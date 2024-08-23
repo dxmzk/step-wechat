@@ -1,0 +1,10 @@
+<view class="v-list-filter">
+  <block wx:for="{{tabList}}" wx:key="index">
+    <view class="v-filter-view" bindtap="onItemClick" data-idx="{{index}}">
+      <text wx:if="{{index != 3}}" class="{{item.enable == 0? 'v-filter-view-name':'v-filter-on'}}">{{item.name}}</text>
+      <image wx:if="{{item.icon && index != 3}}" class="v-filter-ic" src="/assets/icon/filter_{{item.src}}.png"/>
+      <text wx:if="{{index == 3}}" class="{{filter == 1 ? 'v-filter-on' : 'v-filter-view-name'}}">{{item.name}}</text>
+      <image wx:if="{{index == 3}}" class="v-filter-ic" src="/assets/icon/filter_{{filter == 1 ? 'sort_on':'sort'}}.png"/>
+    </view>
+  </block>
+</view>

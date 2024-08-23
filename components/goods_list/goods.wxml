@@ -1,0 +1,14 @@
+<view class="v-goods-list">
+<!-- 左边栏 -->
+  <view class="v-list">
+    <block wx:for="{{leftList}}" wx:key="item">
+      <goods_item item="{{item}}" bindclick="onItemClick"/>
+    </block>
+  </view>
+  <!-- 右边栏 -->
+  <view class="v-list2">
+    <block wx:for="{{rightList}}" wx:key="item">
+      <goods_item item="{{item}}" bindclick="onItemClick"/>
+    </block>
+  </view>
+</view>

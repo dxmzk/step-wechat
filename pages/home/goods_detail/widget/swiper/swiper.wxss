@@ -1,0 +1,80 @@
+.v-swiper {
+  z-index: 1;
+  min-height: 560rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f3f3;
+}
+.v-swiper .v-swiper-box {
+  width: 100%;
+  height: 560rpx;
+}
+.v-swiper .v-swiper-item {
+  width: 100%;
+  height: 100%;
+}
+.v-swiper .v-swiper-item-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.v-swiper .v-idc-box {
+  z-index: 9;
+  bottom: 24rpx;
+  position: absolute;
+  width: 230rpx;
+  height: 40rpx;
+  display: flex;
+
+  border-radius: 6rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  color: white;
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular;
+}
+.v-swiper .v-item {
+  flex: 1;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 6rpx;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.v-swiper .v-unitem {
+  flex: 1;
+  background-color: transparent;
+}
+.v-swiper .v-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.v-swiper .v-num-box {
+  z-index: 9;
+  right: 32rpx;
+  bottom: 24rpx;
+  position: absolute;
+  width: 70rpx;
+  height: 40rpx;
+  display: flex;
+
+  border-radius: 6rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  color: white;
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular;
+}
+
+.v-swiper .vr_button {
+  z-index: 9;
+  top: 300rpx;
+  left: 315rpx;
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  border-radius: 60rpx;
+}

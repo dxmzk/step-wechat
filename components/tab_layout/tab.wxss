@@ -1,0 +1,50 @@
+
+.v-tab-layout {
+  width: 100vw;
+  max-width: 100vw;
+  height: 86rpx;
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  overflow-x: scroll;
+  flex-direction: row;
+  background-color: white;
+}
+.v-tab-layout .v-row {
+  width: 100%;
+  display: flex;
+  padding: 0 16rpx;
+}
+.v-tab-layout .v-tab-view {
+  flex: 1;
+  min-width: 56rpx;
+  line-height: 66rpx;
+  font-size: 36rpx;
+  font-weight: 500;
+  font-family: PingFangSC-Medium;
+  white-space: nowrap;
+
+  padding: 10rpx 24rpx 0 24rpx;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.v-tab-layout .v-tab-line {
+  z-index: 9;
+  width: 48rpx;
+  height: 6rpx;
+  margin-bottom: 4rpx;
+  border-radius: 2rpx;
+  background-color: #fe7100;
+}
+.v-tab-layout .v-tab-line2 {
+  width: 1px;
+  height: 6rpx;
+}
+
+.v-tab-layout .v-tab-unselect {
+  color: #979797;
+  font-size: 28rpx;
+}

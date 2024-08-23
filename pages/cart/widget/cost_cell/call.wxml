@@ -1,0 +1,10 @@
+<view class="v-cast-cell">
+  <block wx:for="{{items}}" wx:key="index">
+    <view class="v-row v-item">
+      <text wx:if="{{item.tag}}" class="v-str-tag">{{item.tag}}</text>
+      <text class="v-flex">{{item.label}}</text>
+      <text class="v-item-{{item.mode||'value'}}" style="{{item.color||''}}"><text wx:if="{{item.unit}}" class="v-unit">{{item.unit}}</text>{{item.value}}</text>
+      <image wx:if="{{item.icon}}" class="v-item-icon" src="{{item.icon || '/assets/icon/arrow_right.png'}}"/>
+    </view>
+  </block>
+</view>

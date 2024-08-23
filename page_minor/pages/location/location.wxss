@@ -1,0 +1,110 @@
+.location {
+  height: 100vh;
+}
+
+.p-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.p-top-ads-box {
+  margin-top: 20rpx;
+  padding: 24rpx 32rpx;
+}
+
+.p-ads-box {
+  padding: 24rpx 32rpx;
+  background-color: white;
+}
+
+.cur-ads-box {
+  margin-bottom: 8rpx;
+}
+
+.p-icon {
+  width: 32rpx;
+  height: 36rpx;
+  margin-right: 18rpx;
+}
+
+.p-icon2 {
+  margin-top: 32rpx;
+}
+.p-address {
+  color: #232323;
+  font-size: 30rpx;
+}
+.p-list {
+  flex: 1;
+  /* overflow: scroll; */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 88rpx;
+}
+.p-empty {
+  color: #979797;
+  font-size: 28rpx;
+  margin: 32rpx 32rpx;
+}
+.p-item {
+  align-items: start;
+  min-height: 88rpx;
+  padding: 24rpx 32rpx;
+  background-color: white;
+  border-bottom: solid #f3f3f3 1px;
+}
+
+.item-top-box {
+  color: #232323;
+  font-size: 30rpx;
+}
+
+.item-def-str {
+  background-color: #FE7100;
+  border-radius: 6rpx;
+  margin-right: 16rpx;
+  color: white;
+  font-size: 20rpx;
+  padding: 3rpx 6rpx;
+  line-height: 22rpx;
+}
+
+.item-address-str {
+  color: #676767;
+  font-size: 24rpx;
+  margin: 16rpx 0;
+}
+
+.item-unuse {
+  color: #989898;
+}
+
+.item-address-status {
+  color: #FF4B33;
+  font-size: 22rpx;
+  background: #FFEDEB;
+  border-radius: 8rpx;
+  padding: 4rpx 8rpx;
+  line-height: 24rpx;
+}
+.p-bottom {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+}
+.p-ok-btn {
+  
+  height: 88rpx;
+  margin: 12rpx 32rpx;
+  border-radius: 16rpx;
+  text-align: center;
+  line-height: 88rpx;
+  background-color: #FE7100;
+
+  font-family: PingFangSC-Medium;
+  font-size: 36rpx;
+  color: #FFFFFF;
+  font-weight: 500;
+}

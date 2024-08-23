@@ -1,0 +1,39 @@
+<view class="container">
+  <header title="会员卡" />
+  <view class="column code-box">
+    <view class="row">
+      <text class="vip-tag-str">会员</text>
+      <text class="phone">{{cardInfo.phone}}</text>
+    </view>
+
+    <view class="qrcode-box">
+      <canvas canvas-id="vip-qrcode" class="qrcode-img" />
+    </view>
+    
+    <view class="row" bindtap="onCopyCardNo">
+      <text class="card-code">{{cardInfo.cardNo}}</text>
+      <text class="card-look">点击查看数字</text>
+    </view>
+
+    <view class="column card-hint">
+      <text>线下购物扫描会员码并支付后发放积分</text>
+      <text>线上购物积分自动发放</text>
+    </view>
+    <view class="row actions">
+      <view class="column center action-box">
+        <text>{{couponNum}}</text>
+        <text>优惠券</text>
+      </view>
+      <view class="column center action-box">
+        <text>{{scoreNum}}</text>
+        <text>积分</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="column coupon-box" bindtap="gotoCouponPage">
+    <text class="money-str">88元无门槛券</text>
+    <text class="info-str">邀请3人领取大礼包</text>
+    <text class="get-btn">去领取</text>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="v-swiper">
+  <swiper class="v-swiper-box" bindchange="onChangePage" current='{{curIndex-1}}'>
+    <block wx:for="{{items}}" wx:key="item">
+      <swiper-item>
+        <video id="v_swiper_video" wx:if="{{item.type == 0}}" class="v-swiper-item" src="{{item.url}}" bindplay='playVideo' bindfullscreenchange='onFullScreenChange' show-fullscreen-btn='{{false}}' controls="{{isfullscreen}}" show-center-play-btn='{{true}}' bindended='onEnded' bindtap="onVideoLook" />
+        <image wx:if="{{item.type == 1}}" class="v-swiper-item" bindtap="onImgLook" data-index="{{index}}" lazy-load mode="aspectFill" src="{{item.url}}" />
+        <view wx:if="{{item.type == 2}}" class="v-swiper-item-view">
+          <image class="v-swiper-item" mode="aspectFill" src="{{item.url}}" data-index="{{index}}" />
+          <image wx:if="{{curIndex == items.length}}" class="vr_button" src="../assets/ic_3d.png" bindtap="on3DLook" />
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view wx:if="{{tabs.length > 1}}" class="v-idc-box">
+    <block wx:for="{{tabs}}" wx:key="index">
+      <view class="v-item v-center {{item.type == tabIndex ? '':'v-unitem'}}" data-type='{{item.type}}' bind:tap="onTap">{{item.name}}</view>
+    </block>
+  </view>
+  <view class="v-num-box v-center">{{curIndex}}/{{items.length}}</view>
+</view>
